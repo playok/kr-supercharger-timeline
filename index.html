@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Supercharger Timeline - Lifecycle Tracking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Tesla & Pretendard Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/tesla-2" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    
+    <style>
+        body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif; }
+        
+        /* 모바일: 헤더 ~56px, 푸터 ~56px */
+        #map { height: calc(100vh - 112px); width: 100%; z-index: 1; background: #f8fafc; }
+        @media (min-width: 768px) {
+            #map { height: calc(100vh - 160px); }
+        }
+        .tesla-red { color: #E82127; }
+        .bg-tesla-red { background-color: #E82127; }
+        
+        /* TESLA 로고 전용 스타일 */
+        .font-tesla { 
+            font-family: 'Tesla', 'Pretendard', sans-serif !important; 
+            letter-spacing: 0.05em;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: normal;
+            min-width: 45px;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        @keyframes pin-drop {
+            0% { transform: translateY(-40px); opacity: 0; }
+            60% { transform: translateY(5px); opacity: 1; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        .animate-pin { animation: pin-drop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+        .custom-pin-container { display: flex; justify-content: center; align-items: center; }
+        
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none; height: 18px; width: 18px; border-radius: 50%;
+            background: #E82127; cursor: pointer; border: 2px solid white; box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 overflow-hidden">
+
+    <header class="bg-white border-b px-3 md:px-6 py-2 md:py-4 flex justify-between items-center shadow-sm relative z-10">
+        <div class="flex items-center gap-2 md:gap-4">
+            <div>
+                <h1 class="text-base md:text-xl font-bold text-slate-800 flex items-center gap-1 md:gap-2">
+                    <span class="bg-tesla-red text-white px-1.5 md:px-2 py-1 rounded-sm text-[8px] md:text-[9px] font-tesla leading-none h-5 md:h-6 flex items-center">TESLA</span>
+                    <span class="tracking-tight">
+                        <span class="hidden sm:inline">대한민국 슈퍼차저 타임라인</span>
+                        <span class="sm:hidden">슈퍼차저 타임라인</span>
+                    </span>
+                </h1>
+                <p class="text-xs md:text-sm text-slate-500" id="data-status">데이터를 로드 중입니다...</p>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-2 md:gap-4 text-right">
+            <!-- Stall 카운트: 모바일에서 숨김 -->
+            <div class="hidden lg:flex gap-4 border-r pr-6 items-center">
+                <div class="flex flex-col">
+                    <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter">Active V2</span>
+                    <span id="v2-stall-count" class="text-lg font-black text-green-500 leading-none text-center">0</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter">Active V3</span>
+                    <span id="v3-stall-count" class="text-lg font-black text-red-500 leading-none text-center">0</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter">Active V4</span>
+                    <span id="v4-stall-count" class="text-lg font-black text-black leading-none text-center">0</span>
+                </div>
+                <div class="flex flex-col border-l pl-4 ml-2">
+                    <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter">Inactive</span>
+                    <span id="inactive-stall-count" class="text-lg font-black text-slate-400 leading-none text-center">0</span>
+                </div>
+            </div>
+
+            <div class="pl-1 md:pl-2">
+                <button id="config-btn" class="hidden md:flex items-center gap-1 text-sm font-semibold text-slate-600 hover:text-tesla-red transition-colors mb-1 justify-end w-full">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                    데이터 입력
+                </button>
+                <div class="text-lg md:text-xl font-black tesla-red leading-none flex flex-col items-end">
+                    <div><span id="count-display">0</span> <span class="text-xs md:text-sm text-slate-600 font-medium tracking-tighter">개소</span></div>
+                    <div class="text-xs md:text-sm font-bold text-slate-400 mt-0.5 md:mt-1"><span id="closed-count-display">0</span> <span class="font-medium tracking-tighter">Closed</span></div>
+                </div>
+                <div id="date-display" class="text-[9px] md:text-[10px] text-slate-400 font-mono mt-0.5 md:mt-1 uppercase tracking-widest">-</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative">
+        <div id="map"></div>
+        
+        <!-- Legend Overlay -->
+        <div class="absolute top-2 right-2 md:top-4 md:right-4 bg-white/90 backdrop-blur p-2 md:p-3 rounded-lg shadow-md z-[1000] text-[10px] md:text-xs space-y-1 md:space-y-2 border border-slate-200">
+            <div class="flex items-center gap-1.5 md:gap-2"><div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-black"></div><span class="font-medium">V4</span></div>
+            <div class="flex items-center gap-1.5 md:gap-2"><div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-[#E82127]"></div><span class="font-medium">V3</span></div>
+            <div class="flex items-center gap-1.5 md:gap-2">
+                <div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full overflow-hidden flex"><div class="w-1.5 h-2.5 md:h-3 bg-[#22c55e]"></div><div class="w-1.5 h-2.5 md:h-3 bg-[#E82127]"></div></div>
+                <span class="font-medium">V2+V3</span>
+            </div>
+            <div class="flex items-center gap-1.5 md:gap-2"><div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-[#22c55e]"></div><span class="font-medium">V2</span></div>
+            <div class="flex items-center gap-1.5 md:gap-2 border-t pt-1 mt-1"><div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-[#94a3b8]"></div><span class="font-medium text-slate-500">Closed</span></div>
+        </div>
+
+        <div id="modal" class="hidden fixed inset-0 bg-black/50 z-[2000] flex items-center justify-center p-4 backdrop-blur-sm">
+            <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl overflow-hidden">
+                <div class="p-6 border-b flex justify-between items-center">
+                    <h2 class="font-bold text-lg">JSON 데이터 붙여넣기</h2>
+                    <button id="close-modal" class="text-slate-400 hover:text-slate-600 text-2xl">&times;</button>
+                </div>
+                <div class="p-6">
+                    <p class="text-sm text-slate-500 mb-4">dateOpened(오픈)와 dateClosed(폐쇄)가 포함된 JSON을 입력하세요.</p>
+                    <textarea id="json-input" class="w-full h-64 p-4 font-mono text-xs bg-slate-900 text-green-400 rounded-lg border-none focus:ring-2 focus:ring-tesla-red" placeholder='{"results": [...]}'></textarea>
+                    
+                    <div id="error-message" class="hidden mt-3 p-3 bg-red-50 border border-red-200 text-red-600 text-sm rounded-lg flex items-center gap-2">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/></svg>
+                        <span id="error-text">오류가 발생했습니다.</span>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t flex justify-end gap-3">
+                    <button id="apply-btn" class="bg-tesla-red text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 transition-colors">데이터 적용</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 right-0 bg-white border-t px-3 md:px-6 py-2 md:py-4 z-[1001] shadow-2xl">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3 md:gap-6 flex-grow max-w-4xl">
+                <!-- Play/Pause Button -->
+                <button id="play-btn" class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-white transition-all shadow-lg bg-slate-300 cursor-not-allowed" disabled>
+                    <svg id="play-icon" class="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 16 16"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+                    <svg id="pause-icon" class="hidden w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 16 16"><path d="M5.5 3.5A.5.5 0 0 1 6 4v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"/></svg>
+                </button>
+
+                <!-- Slider -->
+                <div class="flex-grow">
+                    <input id="timeline-slider" type="range" min="0" max="0" value="0" class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-not-allowed" disabled>
+                    <div class="flex justify-between text-[9px] md:text-[10px] text-slate-400 mt-1 md:mt-2 font-mono uppercase tracking-tighter">
+                        <span id="label-start">START</span>
+                        <span id="slider-date" class="font-bold text-slate-600">준비됨</span>
+                        <span id="label-end">END</span>
+                    </div>
+                </div>
+
+                <button id="reset-btn" class="hidden sm:block text-xs text-slate-500 hover:text-slate-800 font-medium px-3 md:px-4 py-1.5 md:py-2 border rounded-md transition-colors bg-slate-50">Reset</button>
+            </div>
+
+            <div class="text-right text-[10px] text-slate-400 leading-tight border-l pl-4 md:pl-6 ml-4 md:ml-6 hidden md:block">
+                <div>MIT License</div>
+                <div class="mt-1">Data: <a href="https://supercharge.info" target="_blank" class="hover:text-tesla-red underline decoration-dotted">supercharge.info</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('map', { zoomControl: false }).setView([36.3, 127.8], 7);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { attribution: '&copy; CARTO' }).addTo(map);
+
+        const els = {
+            slider: document.getElementById('timeline-slider'),
+            playBtn: document.getElementById('play-btn'),
+            playIcon: document.getElementById('play-icon'),
+            pauseIcon: document.getElementById('pause-icon'),
+            count: document.getElementById('count-display'),
+            closedCount: document.getElementById('closed-count-display'),
+            date: document.getElementById('date-display'),
+            sliderDate: document.getElementById('slider-date'),
+            resetBtn: document.getElementById('reset-btn'),
+            modal: document.getElementById('modal'),
+            configBtn: document.getElementById('config-btn'),
+            closeModal: document.getElementById('close-modal'),
+            jsonInput: document.getElementById('json-input'),
+            applyBtn: document.getElementById('apply-btn'),
+            status: document.getElementById('data-status'),
+            errorBox: document.getElementById('error-message'),
+            errorText: document.getElementById('error-text'),
+            v2Count: document.getElementById('v2-stall-count'),
+            v3Count: document.getElementById('v3-stall-count'),
+            v4Count: document.getElementById('v4-stall-count'),
+            inactiveStallCount: document.getElementById('inactive-stall-count')
+        };
+
+        let superchargers = [];
+        let timelineDates = [];
+        let markers = [];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let timer = null;
+
+        function showError(msg) {
+            els.errorText.innerText = msg;
+            els.errorBox.classList.remove('hidden');
+        }
+
+        // --- Data Processor ---
+        function parseAndInitData(raw) {
+            const dataArray = Array.isArray(raw) ? raw : (raw.results || raw.data || []);
+            if (dataArray.length === 0) throw new Error("데이터 배열을 찾을 수 없습니다.");
+
+            const datesSet = new Set();
+            superchargers = dataArray
+                .filter(d => (d.dateOpened || d.dateClosed) && (d.gps || d.gpsLatitude))
+                .map(d => {
+                    const lat = d.gps ? d.gps.latitude : d.gpsLatitude;
+                    const lng = d.gps ? d.gps.longitude : d.gpsLongitude;
+                    
+                    let version = 'V3';
+                    if (d.stalls) {
+                        const v4 = d.stalls.v4 || 0;
+                        // "other"를 v3에 합산하여 처리
+                        const v3 = (d.stalls.v3 || 0) + (d.stalls.other || 0);
+                        const v2 = d.stalls.v2 || 0;
+                        
+                        if (v2 > 0 && v3 > 0) version = 'V2+V3';
+                        else if (v4 > 0) version = 'V4'; 
+                        else if (v3 > 0) version = 'V3'; 
+                        else if (v2 > 0) version = 'V2';
+                    }
+                    
+                    if (d.powerKilowatt > 250 && version !== 'V2+V3') version = 'V4';
+                    if (d.dateOpened) datesSet.add(d.dateOpened);
+                    if (d.dateClosed) datesSet.add(d.dateClosed);
+                    
+                    // status 필드 처리
+                    const status = d.status || 'OPEN';
+
+                    return {
+                        id: d.id, name: d.name, lat, lng,
+                        dateOpened: d.dateOpened || "1900-01-01", dateClosed: d.dateClosed || null,
+                        stalls: d.stallCount, breakdown: d.stalls || {}, power: d.powerKilowatt, type: version,
+                        status: status
+                    };
+                });
+
+            timelineDates = Array.from(datesSet).sort();
+            initTimeline();
+        }
+
+        function initTimeline() {
+            if (!timelineDates.length) return;
+            currentIndex = 0;
+            els.slider.disabled = false;
+            els.slider.classList.remove('cursor-not-allowed');
+            els.slider.max = timelineDates.length - 1;
+            els.playBtn.disabled = false;
+            els.playBtn.classList.replace('bg-slate-300', 'bg-tesla-red');
+            els.playBtn.classList.remove('cursor-not-allowed');
+            document.getElementById('label-start').innerText = timelineDates[0].substring(0, 7);
+            document.getElementById('label-end').innerText = timelineDates[timelineDates.length-1].substring(0, 7);
+            updateMap(0);
+        }
+
+        // --- Marker UI ---
+        function createIcon(type, isClosed, isRecent) {
+            const isHybrid = type === 'V2+V3';
+            let color = isClosed ? '#94a3b8' : (type === 'V4' ? '#000000' : (type === 'V2' ? '#22c55e' : '#E82127'));
+            const animClass = isRecent ? 'animate-pin' : '';
+            let html = `<div class="custom-pin-container ${animClass}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none">`;
+            if (isHybrid && !isClosed) {
+                html += `<defs><linearGradient id="grad-h" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="50%" stop-color="#22c55e"/><stop offset="50%" stop-color="#E82127"/></linearGradient></defs>
+                         <path d="M12 0C7.58 0 4 3.58 4 8C4 13.5 12 24 12 24C12 24 20 13.5 20 8C20 3.58 16.42 0 12 0Z" fill="url(#grad-h)"/>`;
+            } else {
+                html += `<path d="M12 0C7.58 0 4 3.58 4 8C4 13.5 12 24 12 24C12 24 20 13.5 20 8C20 3.58 16.42 0 12 0Z" fill="${color}"/>`;
+            }
+            html += `<circle cx="12" cy="8" r="3" fill="white"/></svg></div>`;
+            return L.divIcon({ html, className: '', iconSize: [24, 24], iconAnchor: [12, 24] });
+        }
+
+        function updateMap(index) {
+            if (!timelineDates.length) return;
+            const targetDate = timelineDates[index];
+            markers.forEach(m => map.removeLayer(m));
+            markers = [];
+            
+            let v2S=0, v3S=0, v4S=0, inactS=0, actSi=0, cloSi=0;
+            
+            superchargers.forEach(d => {
+                if (new Date(d.dateOpened) > new Date(targetDate)) return;
+
+                // 타임라인 기준 closed 판별: dateClosed 날짜 기준으로만 판단
+                const isClosed = d.dateClosed && new Date(d.dateClosed) <= new Date(targetDate);
+
+                const marker = L.marker([d.lat, d.lng], { icon: createIcon(d.type, isClosed, (d.dateOpened===targetDate||d.dateClosed===targetDate)&&isPlaying) }).addTo(map);
+
+                if (!isClosed) {
+                    actSi++;
+                    v2S += (d.breakdown.v2 || 0);
+                    // breakdown 집계 시에도 other를 v3에 합산
+                    v3S += (d.breakdown.v3 || 0) + (d.breakdown.other || 0);
+                    v4S += (d.breakdown.v4 || 0);
+                }
+                else { cloSi++; inactS += (d.stalls || 0); }
+
+                // 상태 태그 생성
+                const statusTag = isClosed
+                    ? `<span class="text-slate-500 font-bold">[CLOSED]</span> `
+                    : `<span class="text-green-600 font-bold">[OPEN]</span> `;
+                
+                // 팝업 텍스트 구성 (기존 breakdown 정보를 바탕으로)
+                let stallSummary = `충전기: ${d.stalls}기`;
+                const bd = d.breakdown;
+                if (bd.v2 || bd.v3 || bd.v4 || bd.other) {
+                    const parts = [];
+                    if (bd.v4) parts.push(`V4: ${bd.v4}`);
+                    if ((bd.v3 || 0) + (bd.other || 0) > 0) parts.push(`V3: ${(bd.v3 || 0) + (bd.other || 0)}`);
+                    if (bd.v2) parts.push(`V2: ${bd.v2}`);
+                    stallSummary = `구성: ${parts.join(', ')}`;
+                }
+
+                const closedInfo = d.dateClosed ? `<div class="text-slate-500">폐쇄: ${d.dateClosed}</div>` : '';
+                marker.bindPopup(`<div class="text-sm"><div class="font-bold border-b pb-1 mb-1">${statusTag}${d.name}</div><div class="text-slate-500">오픈: ${d.dateOpened}</div>${closedInfo}<div class="text-slate-700 font-semibold">${stallSummary}</div></div>`);
+                markers.push(marker);
+            });
+            
+            currentIndex = index; els.slider.value = index; els.count.innerText = actSi; els.closedCount.innerText = cloSi;
+            els.date.innerText = targetDate; els.sliderDate.innerText = targetDate;
+            els.v2Count.innerText = v2S; els.v3Count.innerText = v3S; els.v4Count.innerText = v4S; els.inactiveStallCount.innerText = inactS;
+        }
+
+        async function attemptAutoLoad() {
+            try {
+                const response = await fetch('supercharger.json');
+                if (!response.ok) throw new Error("File not found");
+                const rawData = await response.json();
+                parseAndInitData(rawData);
+                els.status.innerText = `로드 완료 (${superchargers.length}개소)`;
+                els.status.className = "text-sm text-green-600 font-semibold";
+            } catch (err) {
+                els.status.innerText = "데이터를 로드해주세요. (자동 로드 실패)";
+                els.status.className = "text-sm text-slate-500";
+            }
+        }
+
+        els.configBtn.onclick = () => { els.errorBox.classList.add('hidden'); els.modal.classList.remove('hidden'); };
+        els.closeModal.onclick = () => els.modal.classList.add('hidden');
+        els.applyBtn.onclick = () => {
+            try {
+                parseAndInitData(JSON.parse(els.jsonInput.value));
+                els.modal.classList.add('hidden');
+                els.status.innerText = `수동 데이터 로드 완료 (${superchargers.length}개소)`;
+                els.status.className = "text-sm text-green-600 font-semibold";
+            } catch (e) { showError("처리 오류: " + e.message); }
+        };
+        els.playBtn.onclick = () => {
+            isPlaying = !isPlaying;
+            if (isPlaying) {
+                els.playIcon.classList.add('hidden'); els.pauseIcon.classList.remove('hidden');
+                timer = setInterval(() => {
+                    if (currentIndex < timelineDates.length - 1) updateMap(currentIndex + 1);
+                    else { isPlaying=false; clearInterval(timer); els.playIcon.classList.remove('hidden'); els.pauseIcon.classList.add('hidden'); }
+                }, 400);
+            } else { clearInterval(timer); els.playIcon.classList.remove('hidden'); els.pauseIcon.classList.add('hidden'); }
+        };
+        els.slider.oninput = (e) => { isPlaying=false; clearInterval(timer); updateMap(parseInt(e.target.value)); };
+        els.resetBtn.onclick = () => { isPlaying=false; clearInterval(timer); updateMap(0); };
+
+        window.onload = attemptAutoLoad;
+    </script>
+</body>
+</html>
