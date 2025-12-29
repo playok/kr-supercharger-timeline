@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,11 +56,11 @@
                 <h1 class="text-base md:text-xl font-bold text-slate-800 flex items-center gap-1 md:gap-2">
                     <span class="bg-tesla-red text-white px-1.5 md:px-2 py-1 rounded-sm text-[8px] md:text-[9px] font-tesla leading-none h-5 md:h-6 flex items-center">TESLA</span>
                     <span class="tracking-tight">
-                        <span class="hidden sm:inline">대한민국 슈퍼차저 타임라인</span>
-                        <span class="sm:hidden">슈퍼차저 타임라인</span>
+                        <span class="hidden sm:inline" data-i18n="titleFull">대한민국 슈퍼차저 타임라인</span>
+                        <span class="sm:hidden" data-i18n="titleShort">슈퍼차저 타임라인</span>
                     </span>
                 </h1>
-                <p class="text-xs md:text-sm text-slate-500" id="data-status">데이터를 로드 중입니다...</p>
+                <p class="text-xs md:text-sm text-slate-500" id="data-status" data-i18n="loading">데이터를 로드 중입니다...</p>
             </div>
         </div>
 
@@ -88,10 +88,10 @@
             <div class="pl-1 md:pl-2">
                 <button id="config-btn" class="hidden md:flex items-center gap-1 text-sm font-semibold text-slate-600 hover:text-tesla-red transition-colors mb-1 justify-end w-full">
                     <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
-                    데이터 입력
+                    <span data-i18n="dataInput">데이터 입력</span>
                 </button>
                 <div class="text-lg md:text-xl font-black tesla-red leading-none flex flex-col items-end">
-                    <div><span id="count-display">0</span> <span class="text-xs md:text-sm text-slate-600 font-medium tracking-tighter">개소</span></div>
+                    <div><span id="count-display">0</span> <span class="text-xs md:text-sm text-slate-600 font-medium tracking-tighter" data-i18n="sites">개소</span></div>
                     <div class="text-xs md:text-sm font-bold text-slate-400 mt-0.5 md:mt-1"><span id="closed-count-display">0</span> <span class="font-medium tracking-tighter">Closed</span></div>
                 </div>
                 <div id="date-display" class="text-[9px] md:text-[10px] text-slate-400 font-mono mt-0.5 md:mt-1 uppercase tracking-widest">-</div>
@@ -117,20 +117,20 @@
         <div id="modal" class="hidden fixed inset-0 bg-black/50 z-[2000] flex items-center justify-center p-4 backdrop-blur-sm">
             <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl overflow-hidden">
                 <div class="p-6 border-b flex justify-between items-center">
-                    <h2 class="font-bold text-lg">JSON 데이터 붙여넣기</h2>
+                    <h2 class="font-bold text-lg" data-i18n="modalTitle">JSON 데이터 붙여넣기</h2>
                     <button id="close-modal" class="text-slate-400 hover:text-slate-600 text-2xl">&times;</button>
                 </div>
                 <div class="p-6">
-                    <p class="text-sm text-slate-500 mb-4">dateOpened(오픈)와 dateClosed(폐쇄)가 포함된 JSON을 입력하세요.</p>
+                    <p class="text-sm text-slate-500 mb-4" data-i18n="modalDesc">dateOpened(오픈)와 dateClosed(폐쇄)가 포함된 JSON을 입력하세요.</p>
                     <textarea id="json-input" class="w-full h-64 p-4 font-mono text-xs bg-slate-900 text-green-400 rounded-lg border-none focus:ring-2 focus:ring-tesla-red" placeholder='{"results": [...]}'></textarea>
                     
                     <div id="error-message" class="hidden mt-3 p-3 bg-red-50 border border-red-200 text-red-600 text-sm rounded-lg flex items-center gap-2">
                         <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/></svg>
-                        <span id="error-text">오류가 발생했습니다.</span>
+                        <span id="error-text" data-i18n="errorOccurred">오류가 발생했습니다.</span>
                     </div>
                 </div>
                 <div class="p-4 bg-slate-50 border-t flex justify-end gap-3">
-                    <button id="apply-btn" class="bg-tesla-red text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 transition-colors">데이터 적용</button>
+                    <button id="apply-btn" class="bg-tesla-red text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 transition-colors" data-i18n="applyData">데이터 적용</button>
                 </div>
             </div>
         </div>
@@ -150,7 +150,7 @@
                     <input id="timeline-slider" type="range" min="0" max="0" value="0" class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-not-allowed" disabled>
                     <div class="flex justify-between text-[9px] md:text-[10px] text-slate-400 mt-1 md:mt-2 font-mono uppercase tracking-tighter">
                         <span id="label-start">START</span>
-                        <span id="slider-date" class="font-bold text-slate-600">준비됨</span>
+                        <span id="slider-date" class="font-bold text-slate-600" data-i18n="ready">준비됨</span>
                         <span id="label-end">END</span>
                     </div>
                 </div>
@@ -167,8 +167,73 @@
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
+        // --- i18n 다국어 시스템 ---
+        const i18n = {
+            ko: {
+                titleFull: '대한민국 슈퍼차저 타임라인',
+                titleShort: '슈퍼차저 타임라인',
+                dataInput: '데이터 입력',
+                sites: '개소',
+                ready: '준비됨',
+                modalTitle: 'JSON 데이터 붙여넣기',
+                modalDesc: 'dateOpened(오픈)와 dateClosed(폐쇄)가 포함된 JSON을 입력하세요.',
+                applyData: '데이터 적용',
+                loading: '데이터를 로드 중입니다...',
+                loadComplete: '로드 완료',
+                loadFailed: '데이터를 로드해주세요. (자동 로드 실패)',
+                manualLoadComplete: '수동 데이터 로드 완료',
+                processError: '처리 오류',
+                errorOccurred: '오류가 발생했습니다.',
+                noDataArray: '데이터 배열을 찾을 수 없습니다.',
+                chargers: '충전기',
+                config: '구성',
+                opened: '오픈',
+                closed: '폐쇄'
+            },
+            en: {
+                titleFull: 'Korea Supercharger Timeline',
+                titleShort: 'Supercharger Timeline',
+                dataInput: 'Data Input',
+                sites: 'Sites',
+                ready: 'Ready',
+                modalTitle: 'Paste JSON Data',
+                modalDesc: 'Enter JSON containing dateOpened and dateClosed fields.',
+                applyData: 'Apply Data',
+                loading: 'Loading data...',
+                loadComplete: 'Loaded',
+                loadFailed: 'Please load data. (Auto load failed)',
+                manualLoadComplete: 'Manual data loaded',
+                processError: 'Processing error',
+                errorOccurred: 'An error occurred.',
+                noDataArray: 'Data array not found.',
+                chargers: 'Chargers',
+                config: 'Config',
+                opened: 'Opened',
+                closed: 'Closed'
+            }
+        };
+
+        // 브라우저 언어 감지 (ko가 아니면 en으로 fallback)
+        const userLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        const lang = userLang.startsWith('ko') ? 'ko' : 'en';
+        const t = i18n[lang];
+
+        // HTML lang 속성 업데이트
+        document.getElementById('html-root').setAttribute('lang', lang);
+
+        // data-i18n 속성이 있는 요소들 번역 적용
+        function applyTranslations() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key]) el.textContent = t[key];
+            });
+        }
+
+        // DOM 로드 후 번역 적용
+        document.addEventListener('DOMContentLoaded', applyTranslations);
+
         const map = L.map('map', { zoomControl: false }).setView([36.3, 127.8], 7);
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { attribution: '&copy; CARTO' }).addTo(map);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>' }).addTo(map);
 
         const els = {
             slider: document.getElementById('timeline-slider'),
@@ -209,7 +274,7 @@
         // --- Data Processor ---
         function parseAndInitData(raw) {
             const dataArray = Array.isArray(raw) ? raw : (raw.results || raw.data || []);
-            if (dataArray.length === 0) throw new Error("데이터 배열을 찾을 수 없습니다.");
+            if (dataArray.length === 0) throw new Error(t.noDataArray);
 
             const datesSet = new Set();
             superchargers = dataArray
@@ -311,18 +376,18 @@
                     : `<span class="text-green-600 font-bold">[OPEN]</span> `;
                 
                 // 팝업 텍스트 구성 (기존 breakdown 정보를 바탕으로)
-                let stallSummary = `충전기: ${d.stalls}기`;
+                let stallSummary = `${t.chargers}: ${d.stalls}`;
                 const bd = d.breakdown;
                 if (bd.v2 || bd.v3 || bd.v4 || bd.other) {
                     const parts = [];
                     if (bd.v4) parts.push(`V4: ${bd.v4}`);
                     if ((bd.v3 || 0) + (bd.other || 0) > 0) parts.push(`V3: ${(bd.v3 || 0) + (bd.other || 0)}`);
                     if (bd.v2) parts.push(`V2: ${bd.v2}`);
-                    stallSummary = `구성: ${parts.join(', ')}`;
+                    stallSummary = `${t.config}: ${parts.join(', ')}`;
                 }
 
-                const closedInfo = d.dateClosed ? `<div class="text-slate-500">폐쇄: ${d.dateClosed}</div>` : '';
-                marker.bindPopup(`<div class="text-sm"><div class="font-bold border-b pb-1 mb-1">${statusTag}${d.name}</div><div class="text-slate-500">오픈: ${d.dateOpened}</div>${closedInfo}<div class="text-slate-700 font-semibold">${stallSummary}</div></div>`);
+                const closedInfo = d.dateClosed ? `<div class="text-slate-500">${t.closed}: ${d.dateClosed}</div>` : '';
+                marker.bindPopup(`<div class="text-sm"><div class="font-bold border-b pb-1 mb-1">${statusTag}${d.name}</div><div class="text-slate-500">${t.opened}: ${d.dateOpened}</div>${closedInfo}<div class="text-slate-700 font-semibold">${stallSummary}</div></div>`);
                 markers.push(marker);
             });
             
@@ -337,10 +402,10 @@
                 if (!response.ok) throw new Error("File not found");
                 const rawData = await response.json();
                 parseAndInitData(rawData);
-                els.status.innerText = `로드 완료 (${superchargers.length}개소)`;
+                els.status.innerText = `${t.loadComplete} (${superchargers.length} ${t.sites})`;
                 els.status.className = "text-sm text-green-600 font-semibold";
             } catch (err) {
-                els.status.innerText = "데이터를 로드해주세요. (자동 로드 실패)";
+                els.status.innerText = t.loadFailed;
                 els.status.className = "text-sm text-slate-500";
             }
         }
@@ -351,9 +416,9 @@
             try {
                 parseAndInitData(JSON.parse(els.jsonInput.value));
                 els.modal.classList.add('hidden');
-                els.status.innerText = `수동 데이터 로드 완료 (${superchargers.length}개소)`;
+                els.status.innerText = `${t.manualLoadComplete} (${superchargers.length} ${t.sites})`;
                 els.status.className = "text-sm text-green-600 font-semibold";
-            } catch (e) { showError("처리 오류: " + e.message); }
+            } catch (e) { showError(`${t.processError}: ${e.message}`); }
         };
         els.playBtn.onclick = () => {
             isPlaying = !isPlaying;
