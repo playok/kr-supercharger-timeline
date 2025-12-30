@@ -5,6 +5,45 @@
   "recordCountTotal": 10058,
   "results": [
     {
+      "id": 10830,
+      "locationId": "32971",
+      "name": "Pyeongchang-gun, South Korea - Tapgeori-gil",
+      "status": "OPEN",
+      "address": {
+        "street": "63 Tapgeori-gil",
+        "city": "Pyeongchang-gun",
+        "state": "Gangwon-do",
+        "zip": "25314",
+        "countryId": 137,
+        "country": "South Korea",
+        "regionId": 102,
+        "region": "Asia Pacific"
+      },
+      "gps": {
+        "latitude": 37.609702,
+        "longitude": 128.463859
+      },
+      "dateOpened": "2025-12-30",
+      "stallCount": 8,
+      "counted": true,
+      "elevationMeters": 591,
+      "powerKilowatt": 325,
+      "solarCanopy": false,
+      "battery": false,
+      "otherEVs": true,
+      "statusDays": 0,
+      "urlDiscuss": true,
+      "stalls": {
+        "v4": 8
+      },
+      "plugs": {
+        "nacs": 8,
+        "ccs1": 8,
+        "multi": 8
+      },
+      "facilityName": "평창휴게소(인천방향)"
+    },
+    {
       "id": 8556,
       "locationId": "31762",
       "name": "Ansan, South Korea - Gwangdeok4",
