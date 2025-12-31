@@ -5,6 +5,43 @@
   "recordCountTotal": 10058,
   "results": [
     {
+        "id": 10827,
+        "locationId": "461152",
+        "name": "Gongju, South Korea - 58 Nonsan Cheonan Expressway",
+        "status": "OPEN",
+        "address": {
+            "street": "58 Nonsan Cheonan Expressway",
+            "city": "Gongju",
+            "state": "Chungcheongnam",
+            "zip": "32513",
+            "countryId": 137,
+            "country": "South Korea",
+            "regionId": 102,
+            "region": "Asia Pacific"
+        },
+        "gps": {
+            "latitude": 36.568583,
+            "longitude": 127.114253
+        },
+        "dateOpened": "2025-12-31",
+        "stallCount": 8,
+        "counted": true,
+        "elevationMeters": 89,
+        "powerKilowatt": 325,
+        "solarCanopy": false,
+        "battery": false,
+        "otherEVs": true,
+        "statusDays": 0,
+        "urlDiscuss": true,
+        "stalls": {
+            "v4": 8
+        },
+        "plugs": {
+            "other": 8
+        },
+        "parkingId": 1
+    },    
+    {
       "id": 10825,
       "locationId": "461102",
       "name": "Gongju, South Korea - 27 Nonsan Cheonan Expressway",
