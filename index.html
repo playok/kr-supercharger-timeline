@@ -398,7 +398,7 @@
 
         async function attemptAutoLoad() {
             try {
-                const response = await fetch('supercharger.json');
+                const response = await fetch('supercharger.minimal.json');
                 if (!response.ok) throw new Error("File not found");
                 const rawData = await response.json();
                 parseAndInitData(rawData);
