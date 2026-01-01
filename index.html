@@ -115,7 +115,7 @@
         </div>
 
         <!-- Growth Chart Overlay -->
-        <div id="chart-overlay" class="absolute bottom-16 md:bottom-20 right-2 md:right-4 bg-white/90 backdrop-blur p-2 md:p-3 rounded-lg shadow-md z-[1000] border border-slate-200 hidden" style="width: 280px; height: 140px;">
+        <div id="chart-overlay" class="absolute bottom-20 right-4 bg-white/90 backdrop-blur p-3 rounded-lg shadow-md z-[1000] border border-slate-200 hidden md:block" style="width: 280px; height: 140px;">
             <canvas id="growth-chart"></canvas>
         </div>
 
@@ -440,7 +440,10 @@
                 }
             });
 
-            els.chartOverlay.classList.remove('hidden');
+            // 모바일이 아닌 경우에만 차트 표시 (md: 768px 이상)
+            if (window.innerWidth >= 768) {
+                els.chartOverlay.classList.remove('hidden');
+            }
         }
 
         function updateGrowthChart(index) {
