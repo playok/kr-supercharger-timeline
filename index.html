@@ -114,6 +114,11 @@
             <div class="flex items-center gap-1.5 md:gap-2 border-t pt-1 mt-1"><div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-[#94a3b8]"></div><span class="font-medium text-slate-500">Closed</span></div>
         </div>
 
+        <!-- Growth Chart Overlay -->
+        <div id="chart-overlay" class="absolute bottom-16 md:bottom-20 right-2 md:right-4 bg-white/90 backdrop-blur p-2 md:p-3 rounded-lg shadow-md z-[1000] border border-slate-200 hidden" style="width: 280px; height: 140px;">
+            <canvas id="growth-chart"></canvas>
+        </div>
+
         <div id="modal" class="hidden fixed inset-0 bg-black/50 z-[2000] flex items-center justify-center p-4 backdrop-blur-sm">
             <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl overflow-hidden">
                 <div class="p-6 border-b flex justify-between items-center">
@@ -166,6 +171,7 @@
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         // --- i18n 다국어 시스템 ---
         const i18n = {
@@ -188,7 +194,10 @@
                 chargers: '충전기',
                 config: '구성',
                 opened: '오픈',
-                closed: '폐쇄'
+                closed: '폐쇄',
+                growthChart: '증감 현황',
+                stalls: '충전기',
+                sitesLabel: '충전소'
             },
             en: {
                 titleFull: 'Korea Supercharger Timeline',
@@ -209,7 +218,10 @@
                 chargers: 'Chargers',
                 config: 'Config',
                 opened: 'Opened',
-                closed: 'Closed'
+                closed: 'Closed',
+                growthChart: 'Growth Trend',
+                stalls: 'Stalls',
+                sitesLabel: 'Sites'
             }
         };
 
@@ -256,7 +268,9 @@
             v2Count: document.getElementById('v2-stall-count'),
             v3Count: document.getElementById('v3-stall-count'),
             v4Count: document.getElementById('v4-stall-count'),
-            inactiveStallCount: document.getElementById('inactive-stall-count')
+            inactiveStallCount: document.getElementById('inactive-stall-count'),
+            chartOverlay: document.getElementById('chart-overlay'),
+            growthChart: document.getElementById('growth-chart')
         };
 
         let superchargers = [];
@@ -265,10 +279,194 @@
         let currentIndex = 0;
         let isPlaying = false;
         let timer = null;
+        let growthChartInstance = null;
+        let cumulativeData = { labels: [], stalls: [], sites: [] };
 
         function showError(msg) {
             els.errorText.innerText = msg;
             els.errorBox.classList.remove('hidden');
+        }
+
+        // --- Growth Chart ---
+        function calculateCumulativeData() {
+            cumulativeData = { labels: [], stalls: [], sites: [] };
+
+            timelineDates.forEach(date => {
+                let totalStalls = 0;
+                let totalSites = 0;
+
+                superchargers.forEach(d => {
+                    if (new Date(d.dateOpened) <= new Date(date)) {
+                        const isClosed = d.dateClosed && new Date(d.dateClosed) <= new Date(date);
+                        if (!isClosed) {
+                            totalSites++;
+                            totalStalls += (d.stalls || 0);
+                        }
+                    }
+                });
+
+                cumulativeData.labels.push(date);
+                cumulativeData.stalls.push(totalStalls);
+                cumulativeData.sites.push(totalSites);
+            });
+        }
+
+        function initGrowthChart() {
+            if (growthChartInstance) {
+                growthChartInstance.destroy();
+            }
+
+            const ctx = els.growthChart.getContext('2d');
+
+            // Y축 최대값 미리 계산 (전체 데이터 기준)
+            const maxStalls = Math.max(...cumulativeData.stalls);
+            const maxSites = Math.max(...cumulativeData.sites);
+
+            // 연도별 레이블 생성 (2015, 16, 17, ... 형태)
+            const yearLabels = cumulativeData.labels.map((date, i) => {
+                const year = date.split('-')[0];
+                return year;
+            });
+
+            growthChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: yearLabels,
+                    datasets: [
+                        {
+                            label: t.stalls,
+                            data: cumulativeData.stalls.map(() => null), // 초기값 null
+                            borderColor: '#E82127',
+                            backgroundColor: 'rgba(232, 33, 39, 0.15)',
+                            fill: true,
+                            tension: 0.3,
+                            pointRadius: 0,
+                            pointHoverRadius: 4,
+                            borderWidth: 2,
+                            yAxisID: 'y'
+                        },
+                        {
+                            label: t.sitesLabel,
+                            data: cumulativeData.sites.map(() => null), // 초기값 null
+                            borderColor: '#3b82f6',
+                            backgroundColor: 'rgba(59, 130, 246, 0.15)',
+                            fill: true,
+                            tension: 0.3,
+                            pointRadius: 0,
+                            pointHoverRadius: 4,
+                            borderWidth: 2,
+                            yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    layout: {
+                        padding: {
+                            bottom: -5
+                        }
+                    },
+                    animation: {
+                        duration: 150
+                    },
+                    interaction: {
+                        mode: 'index',
+                        intersect: false
+                    },
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                boxWidth: 12,
+                                font: { size: 10 },
+                                padding: 8
+                            }
+                        },
+                        tooltip: {
+                            enabled: true,
+                            callbacks: {
+                                title: function(context) {
+                                    return context[0].label;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            display: true,
+                            ticks: {
+                                font: { size: 9, weight: 'bold' },
+                                color: '#64748b',
+                                maxRotation: 0,
+                                autoSkip: true,
+                                maxTicksLimit: 8,
+                                callback: function(value, index) {
+                                    const label = this.getLabelForValue(value);
+                                    if (!label) return label;
+
+                                    // 첫 번째 표시되는 연도는 전체(2015), 나머지는 축약(16, 17...)
+                                    const allLabels = this.chart.data.labels;
+                                    const firstYear = allLabels[0];
+
+                                    if (label === firstYear) {
+                                        return label; // 첫 연도 전체 표시
+                                    }
+                                    return label.slice(2); // 나머지는 뒤 2자리만
+                                }
+                            },
+                            grid: { display: false }
+                        },
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            grid: { display: false },
+                            ticks: { font: { size: 9 }, color: '#E82127' },
+                            min: 0,
+                            max: Math.ceil(maxStalls * 1.1)
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            grid: { display: false },
+                            ticks: { font: { size: 9 }, color: '#3b82f6' },
+                            min: 0,
+                            max: Math.ceil(maxSites * 1.1)
+                        }
+                    }
+                }
+            });
+
+            els.chartOverlay.classList.remove('hidden');
+        }
+
+        function updateGrowthChart(index) {
+            if (!growthChartInstance) return;
+
+            // 전체 라벨은 유지하고, 현재 인덱스까지만 데이터 표시 (나머지는 null)
+            const stallsData = cumulativeData.stalls.map((v, i) => i <= index ? v : null);
+            const sitesData = cumulativeData.sites.map((v, i) => i <= index ? v : null);
+
+            // 현재 위치에만 포인트 표시 (마지막 데이터 포인트)
+            const pointRadiusStalls = cumulativeData.stalls.map((v, i) => i === index ? 4 : 0);
+            const pointRadiusSites = cumulativeData.sites.map((v, i) => i === index ? 4 : 0);
+
+            growthChartInstance.data.datasets[0].data = stallsData;
+            growthChartInstance.data.datasets[0].pointRadius = pointRadiusStalls;
+            growthChartInstance.data.datasets[0].pointBackgroundColor = '#E82127';
+            growthChartInstance.data.datasets[0].pointBorderColor = '#fff';
+            growthChartInstance.data.datasets[0].pointBorderWidth = 2;
+
+            growthChartInstance.data.datasets[1].data = sitesData;
+            growthChartInstance.data.datasets[1].pointRadius = pointRadiusSites;
+            growthChartInstance.data.datasets[1].pointBackgroundColor = '#3b82f6';
+            growthChartInstance.data.datasets[1].pointBorderColor = '#fff';
+            growthChartInstance.data.datasets[1].pointBorderWidth = 2;
+
+            growthChartInstance.update('none'); // 빠른 업데이트
         }
 
         // --- Data Processor ---
@@ -326,6 +524,11 @@
             els.playBtn.classList.remove('cursor-not-allowed');
             document.getElementById('label-start').innerText = timelineDates[0].substring(0, 7);
             document.getElementById('label-end').innerText = timelineDates[timelineDates.length-1].substring(0, 7);
+
+            // 차트 데이터 계산 및 초기화
+            calculateCumulativeData();
+            initGrowthChart();
+
             updateMap(0);
         }
 
@@ -394,6 +597,9 @@
             currentIndex = index; els.slider.value = index; els.count.innerText = actSi; els.closedCount.innerText = cloSi;
             els.date.innerText = targetDate; els.sliderDate.innerText = targetDate;
             els.v2Count.innerText = v2S; els.v3Count.innerText = v3S; els.v4Count.innerText = v4S; els.inactiveStallCount.innerText = inactS;
+
+            // 차트 업데이트 (타임라인 연동)
+            updateGrowthChart(index);
         }
 
         async function attemptAutoLoad() {
