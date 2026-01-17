@@ -5,6 +5,84 @@
   "recordCountTotal": 10058,
   "results": [
     {
+        "id": 10828,
+        "locationId": "461153",
+        "name": "Gongju, South Korea - 57 Nonsan Cheonan Expressway",
+        "status": "OPEN",
+        "address": {
+            "street": "57 Nonsan Cheonan Expressway",
+            "city": "Gongju",
+            "state": "Chungcheongnam",
+            "zip": "32513",
+            "countryId": 137,
+            "country": "South Korea",
+            "regionId": 102,
+            "region": "Asia Pacific"
+        },
+        "gps": {
+            "latitude": 36.571868,
+            "longitude": 127.112998
+        },
+        "dateOpened": "2026-01-16",
+        "stallCount": 8,
+        "counted": true,
+        "elevationMeters": 84,
+        "powerKilowatt": 325,
+        "solarCanopy": false,
+        "battery": false,
+        "otherEVs": true,
+        "statusDays": 0,
+        "urlDiscuss": true,
+        "stalls": {
+            "v4": 8
+        },
+        "plugs": {
+            "tpc": 8,
+            "ccs1": 8,
+            "multi": 8
+        },
+        "parkingId": 1
+    },
+    {
+        "id": 10826,
+        "locationId": "461003",
+        "name": "Gongju, South Korea - Nonsan Cheonan Expressway",
+        "status": "OPEN",
+        "address": {
+            "street": "32 Nonsan Cheonan Expressway",
+            "city": "Gongju",
+            "state": "Chungcheongnam",
+            "zip": "32607",
+            "countryId": 137,
+            "country": "South Korea",
+            "regionId": 102,
+            "region": "Asia Pacific"
+        },
+        "gps": {
+            "latitude": 36.351948,
+            "longitude": 127.068932
+        },
+        "dateOpened": "2026-01-16",
+        "stallCount": 8,
+        "counted": true,
+        "elevationMeters": 85,
+        "powerKilowatt": 325,
+        "solarCanopy": false,
+        "battery": false,
+        "otherEVs": true,
+        "statusDays": 0,
+        "urlDiscuss": true,
+        "stalls": {
+            "v4": 8
+        },
+        "plugs": {
+            "tpc": 8,
+            "ccs1": 8,
+            "multi": 8
+        },
+        "parkingId": 1
+    },
+    {
         "id": 10827,
         "locationId": "461152",
         "name": "Gongju, South Korea - 58 Nonsan Cheonan Expressway",
