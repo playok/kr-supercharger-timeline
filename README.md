@@ -63,6 +63,19 @@
 }
 ```
 
+## Scripts
+
+### json_compact.sh
+
+`supercharger.json`을 경량화된 `supercharger.minimal.json`으로 변환합니다.
+
+```bash
+# 필요: jq (brew install jq)
+./json_compact.sh
+```
+
+**추출 필드:** `id`, `name`, `dateOpened`, `dateClosed`, `gps`, `stallCount`, `stalls`, `status`, `powerKilowatt`
+
 ## i18n
 
 브라우저 언어 설정에 따라 자동으로 한글/영어가 적용됩니다.
