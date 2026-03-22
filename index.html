@@ -6,6 +6,8 @@
     <title>Tesla Supercharger Timeline - Lifecycle Tracking</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" />
     <!-- Tesla & Pretendard Fonts -->
     <link href="https://fonts.cdnfonts.com/css/tesla-2" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
@@ -42,6 +44,13 @@
         .animate-pin { animation: pin-drop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
         .custom-pin-container { display: flex; justify-content: center; align-items: center; }
         
+        .marker-cluster-small { background-color: rgba(232, 33, 39, 0.3); }
+        .marker-cluster-small div { background-color: rgba(232, 33, 39, 0.6); color: #fff; font-weight: bold; font-size: 12px; }
+        .marker-cluster-medium { background-color: rgba(232, 33, 39, 0.4); }
+        .marker-cluster-medium div { background-color: rgba(232, 33, 39, 0.7); color: #fff; font-weight: bold; font-size: 13px; }
+        .marker-cluster-large { background-color: rgba(232, 33, 39, 0.5); }
+        .marker-cluster-large div { background-color: rgba(232, 33, 39, 0.8); color: #fff; font-weight: bold; font-size: 14px; }
+
         input[type=range]::-webkit-slider-thumb {
             -webkit-appearance: none; height: 18px; width: 18px; border-radius: 50%;
             background: #E82127; cursor: pointer; border: 2px solid white; box-shadow: 0 0 5px rgba(0,0,0,0.3);
@@ -112,6 +121,10 @@
             </div>
             <div class="flex items-center gap-1.5 md:gap-2"><div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-[#22c55e]"></div><span class="font-medium">V2</span></div>
             <div class="flex items-center gap-1.5 md:gap-2 border-t pt-1 mt-1"><div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-[#94a3b8]"></div><span class="font-medium text-slate-500">Closed</span></div>
+            <label class="flex items-center gap-1.5 border-t pt-1 mt-1 cursor-pointer select-none">
+                <input type="checkbox" id="cluster-toggle" class="w-3 h-3 accent-[#E82127] cursor-pointer">
+                <span class="font-medium text-slate-500" data-i18n="clustering">클러스터</span>
+            </label>
         </div>
 
         <!-- Growth Chart Overlay -->
@@ -171,6 +184,7 @@
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         // --- i18n 다국어 시스템 ---
@@ -193,9 +207,12 @@
                 noDataArray: '데이터 배열을 찾을 수 없습니다.',
                 chargers: '충전기',
                 config: '구성',
+                speed: '충전속도',
+                otherEVsYes: '타사 EV 호환',
                 opened: '오픈',
                 closed: '폐쇄',
                 growthChart: '증감 현황',
+                clustering: '클러스터',
                 stalls: '충전기',
                 sitesLabel: '충전소'
             },
@@ -217,9 +234,12 @@
                 noDataArray: 'Data array not found.',
                 chargers: 'Chargers',
                 config: 'Config',
+                speed: 'Speed',
+                otherEVsYes: 'Other EVs OK',
                 opened: 'Opened',
                 closed: 'Closed',
                 growthChart: 'Growth Trend',
+                clustering: 'Cluster',
                 stalls: 'Stalls',
                 sitesLabel: 'Sites'
             }
@@ -281,6 +301,17 @@
         let timer = null;
         let growthChartInstance = null;
         let cumulativeData = { labels: [], stalls: [], sites: [] };
+        let useCluster = false;
+        let clusterGroup = L.markerClusterGroup({
+            maxClusterRadius: 50,
+            spiderfyOnMaxZoom: true,
+            showCoverageOnHover: false,
+            zoomToBoundsOnClick: true,
+            disableClusteringAtZoom: 11,
+            chunkedLoading: true,
+            animateAddingMarkers: false
+        });
+        const clusterToggle = document.getElementById('cluster-toggle');
 
         function showError(msg) {
             els.errorText.innerText = msg;
@@ -441,9 +472,7 @@
             });
 
             // 모바일이 아닌 경우에만 차트 표시 (md: 768px 이상)
-            if (window.innerWidth >= 768) {
-                els.chartOverlay.classList.remove('hidden');
-            }
+            // Tailwind의 hidden md:block 클래스로 제어하므로 JS에서 hidden을 제거하지 않음
         }
 
         function updateGrowthChart(index) {
@@ -508,7 +537,7 @@
                         id: d.id, name: d.name, lat, lng,
                         dateOpened: d.dateOpened || "1900-01-01", dateClosed: d.dateClosed || null,
                         stalls: d.stallCount, breakdown: d.stalls || {}, power: d.powerKilowatt, type: version,
-                        status: status
+                        status: status, otherEVs: d.otherEVs || false
                     };
                 });
 
@@ -547,13 +576,20 @@
             } else {
                 html += `<path d="M12 0C7.58 0 4 3.58 4 8C4 13.5 12 24 12 24C12 24 20 13.5 20 8C20 3.58 16.42 0 12 0Z" fill="${color}"/>`;
             }
-            html += `<circle cx="12" cy="8" r="3" fill="white"/></svg></div>`;
+            if (isClosed) {
+                html += `<line x1="10" y1="6" x2="14" y2="10" stroke="white" stroke-width="2" stroke-linecap="round"/>`;
+                html += `<line x1="14" y1="6" x2="10" y2="10" stroke="white" stroke-width="2" stroke-linecap="round"/>`;
+            } else {
+                html += `<circle cx="12" cy="8" r="3" fill="white"/>`;
+            }
+            html += `</svg></div>`;
             return L.divIcon({ html, className: '', iconSize: [24, 24], iconAnchor: [12, 24] });
         }
 
         function updateMap(index) {
             if (!timelineDates.length) return;
             const targetDate = timelineDates[index];
+            clusterGroup.clearLayers();
             markers.forEach(m => map.removeLayer(m));
             markers = [];
             
@@ -565,7 +601,7 @@
                 // 타임라인 기준 closed 판별: dateClosed 날짜 기준으로만 판단
                 const isClosed = d.dateClosed && new Date(d.dateClosed) <= new Date(targetDate);
 
-                const marker = L.marker([d.lat, d.lng], { icon: createIcon(d.type, isClosed, (d.dateOpened===targetDate||d.dateClosed===targetDate)&&isPlaying) }).addTo(map);
+                const marker = L.marker([d.lat, d.lng], { icon: createIcon(d.type, isClosed, (d.dateOpened===targetDate||d.dateClosed===targetDate)&&isPlaying) });
 
                 if (!isClosed) {
                     actSi++;
@@ -593,8 +629,15 @@
                 }
 
                 const closedInfo = d.dateClosed ? `<div class="text-slate-500">${t.closed}: ${d.dateClosed}</div>` : '';
-                marker.bindPopup(`<div class="text-sm"><div class="font-bold border-b pb-1 mb-1">${statusTag}${d.name}</div><div class="text-slate-500">${t.opened}: ${d.dateOpened}</div>${closedInfo}<div class="text-slate-700 font-semibold">${stallSummary}</div></div>`);
+                const powerInfo = d.power ? `<div class="text-slate-500">${t.speed}: ${d.power}kW</div>` : '';
+                const otherEVsInfo = d.otherEVs ? `<div class="inline-block mt-1 px-1.5 py-0.5 bg-blue-100 text-blue-700 text-[10px] font-bold rounded">${t.otherEVsYes}</div>` : '';
+                marker.bindPopup(`<div class="text-sm"><div class="font-bold border-b pb-1 mb-1">${statusTag}${d.name}</div><div class="text-slate-500">${t.opened}: ${d.dateOpened}</div>${closedInfo}<div class="text-slate-700 font-semibold">${stallSummary}</div>${powerInfo}${otherEVsInfo}</div>`);
                 markers.push(marker);
+                if (useCluster) {
+                    clusterGroup.addLayer(marker);
+                } else {
+                    marker.addTo(map);
+                }
             });
             
             currentIndex = index; els.slider.value = index; els.count.innerText = actSi; els.closedCount.innerText = cloSi;
@@ -607,7 +650,7 @@
 
         async function attemptAutoLoad() {
             try {
-                const response = await fetch('supercharger.minimal.json');
+                const response = await fetch('supercharger.minimal.json', { cache: 'no-cache' });
                 if (!response.ok) throw new Error("File not found");
                 const rawData = await response.json();
                 parseAndInitData(rawData);
@@ -632,6 +675,13 @@
         els.playBtn.onclick = () => {
             isPlaying = !isPlaying;
             if (isPlaying) {
+                // 재생 시 클러스터링 자동 해제
+                if (useCluster) {
+                    useCluster = false;
+                    clusterToggle.checked = false;
+                    map.removeLayer(clusterGroup);
+                    updateMap(currentIndex);
+                }
                 els.playIcon.classList.add('hidden'); els.pauseIcon.classList.remove('hidden');
                 timer = setInterval(() => {
                     if (currentIndex < timelineDates.length - 1) updateMap(currentIndex + 1);
@@ -641,6 +691,17 @@
         };
         els.slider.oninput = (e) => { isPlaying=false; clearInterval(timer); updateMap(parseInt(e.target.value)); };
         els.resetBtn.onclick = () => { isPlaying=false; clearInterval(timer); updateMap(0); };
+
+        // 클러스터링 토글
+        clusterToggle.onchange = () => {
+            useCluster = clusterToggle.checked;
+            if (useCluster) {
+                map.addLayer(clusterGroup);
+            } else {
+                map.removeLayer(clusterGroup);
+            }
+            updateMap(currentIndex);
+        };
 
         window.onload = attemptAutoLoad;
     </script>

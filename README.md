@@ -37,6 +37,15 @@
 | Green | V2 |
 | Gray | Closed |
 
+## Quick Start
+
+```bash
+# Python 3
+python3 -m http.server 8000
+
+# 브라우저에서 http://localhost:8000 접속
+```
+
 ## Usage
 
 1. 페이지 로드 시 `supercharger.json` 자동 로드

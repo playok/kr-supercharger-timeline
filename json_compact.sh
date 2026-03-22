@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # supercharger.json을 경량화된 버전으로 변환
-# 필요한 필드만 추출: id, name, dateOpened, dateClosed, gps, stallCount, stalls, status, powerKilowatt
+# 필요한 필드만 추출: id, name, dateOpened, dateClosed, gps, stallCount, stalls, status, powerKilowatt, otherEVs
 
 INPUT_FILE="supercharger.json"
 OUTPUT_FILE="supercharger.minimal.json"
@@ -27,7 +27,8 @@ jq -c '[.results[] | {
     stallCount,
     stalls,
     status,
-    powerKilowatt
+    powerKilowatt,
+    otherEVs
 }]' "$INPUT_FILE" > "$OUTPUT_FILE"
 
 # 결과 출력
