@@ -1,8 +1,8 @@
 {
   "pageId": null,
   "pageSize": 500,
-  "recordCount": 193,
-  "recordCountTotal": 10422,
+  "recordCount": 194,
+  "recordCountTotal": 10538,
   "results": [
     {
       "id": 6109,
@@ -261,7 +261,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 164,
+      "statusDays": 212,
       "urlDiscuss": false,
       "stalls": {
         "v2": 6
@@ -415,7 +415,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": true,
-      "statusDays": 554,
+      "statusDays": 603,
       "urlDiscuss": false,
       "stalls": {
         "v3": 6
@@ -1691,7 +1691,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 363,
+      "statusDays": 412,
       "urlDiscuss": false,
       "stalls": {
         "v2": 6
@@ -1777,7 +1777,9 @@
         "trailerFriendly": 0
       },
       "plugs": {
-        "ccs1": 6
+        "tpc": 6,
+        "ccs1": 6,
+        "multi": 6
       }
     },
     {
@@ -2465,7 +2467,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 361,
+      "statusDays": 410,
       "urlDiscuss": true
     },
     {
@@ -3217,7 +3219,7 @@
         "longitude": 127.097418
       },
       "dateOpened": "2021-08-19",
-      "stallCount": 3,
+      "stallCount": 8,
       "counted": true,
       "elevationMeters": 52,
       "powerKilowatt": 250,
@@ -3225,15 +3227,16 @@
       "battery": false,
       "otherEVs": true,
       "statusDays": 0,
-      "urlDiscuss": false,
+      "urlDiscuss": true,
       "stalls": {
-        "v3": 3
+        "v3": 3,
+        "v4": 4,
+        "other": 1
       },
       "plugs": {
-        "tpc": 3,
-        "nacs": 0,
-        "ccs1": 3,
-        "multi": 3
+        "tpc": 8,
+        "ccs1": 8,
+        "multi": 8
       }
     },
     {
@@ -4073,7 +4076,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 361,
+      "statusDays": 410,
       "urlDiscuss": true
     },
     {
@@ -4256,7 +4259,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 564,
+      "statusDays": 613,
       "urlDiscuss": true
     },
     {
@@ -4634,7 +4637,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 564,
+      "statusDays": 613,
       "urlDiscuss": true
     },
     {
@@ -5625,7 +5628,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 658,
+      "statusDays": 707,
       "urlDiscuss": false,
       "stalls": {
         "v2": 6
@@ -6083,7 +6086,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 557,
+      "statusDays": 605,
       "urlDiscuss": true
     },
     {
@@ -6267,7 +6270,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 127,
+      "statusDays": 176,
       "urlDiscuss": true
     },
     {
@@ -6296,7 +6299,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 127,
+      "statusDays": 176,
       "urlDiscuss": true
     },
     {
@@ -6325,7 +6328,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 270,
+      "statusDays": 319,
       "urlDiscuss": true
     },
     {
@@ -6681,7 +6684,7 @@
       "id": 8560,
       "locationId": "31863",
       "name": "Uljin County, South Korea",
-      "status": "VOTING",
+      "status": "CONSTRUCTION",
       "address": {
         "street": "X",
         "city": "Uljin County",
@@ -6703,10 +6706,10 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 564,
+      "statusDays": 19,
       "urlDiscuss": true,
       "stalls": {
-        "other": 8
+        "v4": 8
       },
       "plugs": {
         "nacs": 8
@@ -7085,7 +7088,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 564,
+      "statusDays": 613,
       "urlDiscuss": true
     },
     {
@@ -7114,7 +7117,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 564,
+      "statusDays": 613,
       "urlDiscuss": true
     },
     {
@@ -7221,7 +7224,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": true,
-      "statusDays": 127,
+      "statusDays": 176,
       "urlDiscuss": true
     },
     {
@@ -7338,6 +7341,43 @@
         "ccs1": 8,
         "multi": 8
       }
+    },
+    {
+      "id": 11453,
+      "name": "Paju, South Korea - Gyeonggi",
+      "status": "CONSTRUCTION",
+      "address": {
+        "street": "495-122 Munbal-dong",
+        "city": "Paju-si",
+        "state": "Gyeonggi-do",
+        "zip": null,
+        "countryId": 137,
+        "country": "South Korea",
+        "regionId": 102,
+        "region": "Asia Pacific"
+      },
+      "gps": {
+        "latitude": 37.698719,
+        "longitude": 126.683592
+      },
+      "stallCount": 8,
+      "counted": true,
+      "elevationMeters": 12,
+      "powerKilowatt": 325,
+      "solarCanopy": false,
+      "battery": false,
+      "otherEVs": false,
+      "statusDays": 2,
+      "urlDiscuss": true,
+      "stalls": {
+        "v4": 8,
+        "trailerFriendly": 0
+      },
+      "plugs": {
+        "nacs": 8
+      },
+      "parkingId": 1,
+      "facilityName": "Paju Book City Service Area"
     }
   ]
 }
