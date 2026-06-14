@@ -1,8 +1,8 @@
 {
   "pageId": null,
-  "pageSize": 500,
-  "recordCount": 194,
-  "recordCountTotal": 10538,
+  "pageSize": 201,
+  "recordCount": 201,
+  "recordCountTotal": 22476,
   "results": [
     {
       "id": 6109,
@@ -261,7 +261,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 212,
+      "statusDays": 0,
       "urlDiscuss": false,
       "stalls": {
         "v2": 6
@@ -415,7 +415,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": true,
-      "statusDays": 603,
+      "statusDays": 0,
       "urlDiscuss": false,
       "stalls": {
         "v3": 6
@@ -966,43 +966,6 @@
       }
     },
     {
-      "id": 1154,
-      "locationId": "daegusupercharger",
-      "name": "Daegu, South Korea - EXCO",
-      "status": "OPEN",
-      "address": {
-        "street": "10, EXCO-ro, Buk-gu, Daegu",
-        "city": "Daegu",
-        "state": "Daegu",
-        "zip": null,
-        "countryId": 137,
-        "country": "South Korea",
-        "regionId": 102,
-        "region": "Asia Pacific"
-      },
-      "gps": {
-        "latitude": 35.907022,
-        "longitude": 128.613115
-      },
-      "dateOpened": "2017-06-19",
-      "stallCount": 6,
-      "counted": true,
-      "elevationMeters": 35,
-      "powerKilowatt": 120,
-      "solarCanopy": false,
-      "battery": false,
-      "otherEVs": false,
-      "statusDays": 0,
-      "urlDiscuss": false,
-      "stalls": {
-        "v2": 6
-      },
-      "plugs": {
-        "tpc": 6,
-        "nacs": 0
-      }
-    },
-    {
       "id": 3476,
       "locationId": "daeguhyuksinlsupercharger",
       "name": "Daegu, South Korea - Esiapolis",
@@ -1039,6 +1002,43 @@
         "nacs": 0,
         "ccs1": 6,
         "multi": 6
+      }
+    },
+    {
+      "id": 1154,
+      "locationId": "daegusupercharger",
+      "name": "Daegu, South Korea - EXCO",
+      "status": "OPEN",
+      "address": {
+        "street": "10, EXCO-ro, Buk-gu, Daegu",
+        "city": "Daegu",
+        "state": "Daegu",
+        "zip": null,
+        "countryId": 137,
+        "country": "South Korea",
+        "regionId": 102,
+        "region": "Asia Pacific"
+      },
+      "gps": {
+        "latitude": 35.907022,
+        "longitude": 128.613115
+      },
+      "dateOpened": "2017-06-19",
+      "stallCount": 6,
+      "counted": true,
+      "elevationMeters": 35,
+      "powerKilowatt": 120,
+      "solarCanopy": false,
+      "battery": false,
+      "otherEVs": false,
+      "statusDays": 0,
+      "urlDiscuss": false,
+      "stalls": {
+        "v2": 6
+      },
+      "plugs": {
+        "tpc": 6,
+        "nacs": 0
       }
     },
     {
@@ -1272,6 +1272,64 @@
       "plugs": {
         "tpc": 4
       }
+    },
+    {
+      "id": 11528,
+      "locationId": "463019",
+      "name": "Deokpyeong Rest Area(Gangneung), South Korea",
+      "status": "PLAN",
+      "address": {
+        "street": "319 Gakpyeong-ri",
+        "city": "Icheon-si",
+        "state": "Gyeonggi-do",
+        "zip": null,
+        "countryId": 137,
+        "country": "South Korea",
+        "regionId": 102,
+        "region": "Asia Pacific"
+      },
+      "gps": {
+        "latitude": 37.242019,
+        "longitude": 127.388733
+      },
+      "stallCount": 0,
+      "counted": true,
+      "elevationMeters": 105,
+      "powerKilowatt": 325,
+      "solarCanopy": false,
+      "battery": false,
+      "otherEVs": false,
+      "statusDays": 0,
+      "urlDiscuss": false
+    },
+    {
+      "id": 11527,
+      "locationId": "450864",
+      "name": "Deokpyeong Rest Area(Incheon), South Korea",
+      "status": "PLAN",
+      "address": {
+        "street": "287-76 Deogi-ro",
+        "city": "Icheon-si",
+        "state": "Gyeonggi-do",
+        "zip": null,
+        "countryId": 137,
+        "country": "South Korea",
+        "regionId": 102,
+        "region": "Asia Pacific"
+      },
+      "gps": {
+        "latitude": 37.240782,
+        "longitude": 127.38864
+      },
+      "stallCount": 0,
+      "counted": true,
+      "elevationMeters": 104,
+      "powerKilowatt": 325,
+      "solarCanopy": false,
+      "battery": false,
+      "otherEVs": false,
+      "statusDays": 0,
+      "urlDiscuss": false
     },
     {
       "id": 5940,
@@ -1691,7 +1749,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 412,
+      "statusDays": 0,
       "urlDiscuss": false,
       "stalls": {
         "v2": 6
@@ -1701,6 +1759,35 @@
         "nacs": 0
       },
       "parkingId": 5
+    },
+    {
+      "id": 11525,
+      "locationId": "30996",
+      "name": "Geoje, South Korea",
+      "status": "VOTING",
+      "address": {
+        "street": "12 Junggok-ro 2-gil",
+        "city": "Geoje-si",
+        "state": "Gyeongsangnam-do",
+        "zip": null,
+        "countryId": 137,
+        "country": "South Korea",
+        "regionId": 102,
+        "region": "Asia Pacific"
+      },
+      "gps": {
+        "latitude": 34.893126,
+        "longitude": 128.631083
+      },
+      "stallCount": 0,
+      "counted": true,
+      "elevationMeters": 2,
+      "powerKilowatt": 325,
+      "solarCanopy": false,
+      "battery": false,
+      "otherEVs": false,
+      "statusDays": 0,
+      "urlDiscuss": false
     },
     {
       "id": 5507,
@@ -1777,7 +1864,7 @@
         "trailerFriendly": 0
       },
       "plugs": {
-        "tpc": 6,
+        "nacs": 6,
         "ccs1": 6,
         "multi": 6
       }
@@ -1815,7 +1902,7 @@
         "v3": 8
       },
       "plugs": {
-        "tpc": 8,
+        "nacs": 8,
         "ccs1": 8,
         "multi": 8
       }
@@ -1853,8 +1940,7 @@
         "v3": 8
       },
       "plugs": {
-        "tpc": 8,
-        "nacs": 0,
+        "nacs": 8,
         "ccs1": 8,
         "multi": 8
       }
@@ -1931,7 +2017,7 @@
         "trailerFriendly": 0
       },
       "plugs": {
-        "tpc": 8,
+        "nacs": 8,
         "ccs1": 8,
         "multi": 8
       },
@@ -1970,7 +2056,7 @@
         "v4": 8
       },
       "plugs": {
-        "tpc": 8,
+        "nacs": 8,
         "ccs1": 8,
         "multi": 8
       },
@@ -2011,7 +2097,7 @@
         "trailerFriendly": 0
       },
       "plugs": {
-        "tpc": 8,
+        "nacs": 8,
         "ccs1": 8,
         "multi": 8
       },
@@ -2050,7 +2136,7 @@
         "v4": 8
       },
       "plugs": {
-        "tpc": 8,
+        "nacs": 8,
         "ccs1": 8,
         "multi": 8
       },
@@ -2467,7 +2553,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 410,
+      "statusDays": 0,
       "urlDiscuss": true
     },
     {
@@ -2848,8 +2934,7 @@
         "v3": 6
       },
       "plugs": {
-        "tpc": 6,
-        "nacs": 0,
+        "nacs": 6,
         "ccs1": 6,
         "multi": 6
       }
@@ -2887,8 +2972,7 @@
         "v4": 8
       },
       "plugs": {
-        "tpc": 8,
-        "nacs": 0,
+        "nacs": 8,
         "ccs1": 8,
         "multi": 8
       }
@@ -2926,8 +3010,7 @@
         "v3": 8
       },
       "plugs": {
-        "tpc": 8,
-        "nacs": 0,
+        "nacs": 8,
         "ccs1": 8,
         "multi": 8
       }
@@ -3166,7 +3249,7 @@
       "name": "Hwaseong, South Korea - Dongtan Granvia Star",
       "status": "OPEN",
       "address": {
-        "street": "Hwaseong-si Dongtandaero 446 18482 Dongtandaero",
+        "street": "Hwaseong-si Dongtandaero 446",
         "city": "Hwaseong",
         "state": "Gyeonggi",
         "zip": "18482",
@@ -3193,8 +3276,7 @@
         "v3": 9
       },
       "plugs": {
-        "tpc": 9,
-        "nacs": 0,
+        "nacs": 9,
         "ccs1": 9,
         "multi": 9
       }
@@ -3229,12 +3311,11 @@
       "statusDays": 0,
       "urlDiscuss": true,
       "stalls": {
-        "v3": 3,
-        "v4": 4,
-        "other": 1
+        "v3": 4,
+        "v4": 4
       },
       "plugs": {
-        "tpc": 8,
+        "nacs": 8,
         "ccs1": 8,
         "multi": 8
       }
@@ -3272,8 +3353,7 @@
         "v3": 8
       },
       "plugs": {
-        "tpc": 8,
-        "nacs": 0,
+        "nacs": 8,
         "ccs1": 8,
         "multi": 8
       }
@@ -4012,6 +4092,64 @@
       }
     },
     {
+      "id": 11530,
+      "locationId": "463021",
+      "name": "Majang Rest Area(Hanam), South Korea",
+      "status": "PLAN",
+      "address": {
+        "street": "82 Jungbu Expressway",
+        "city": "Icheon-si",
+        "state": "Majang-myeon",
+        "zip": null,
+        "countryId": 137,
+        "country": "South Korea",
+        "regionId": 102,
+        "region": "Asia Pacific"
+      },
+      "gps": {
+        "latitude": 37.263462,
+        "longitude": 127.407772
+      },
+      "stallCount": 0,
+      "counted": true,
+      "elevationMeters": 118,
+      "powerKilowatt": 325,
+      "solarCanopy": false,
+      "battery": false,
+      "otherEVs": false,
+      "statusDays": 0,
+      "urlDiscuss": false
+    },
+    {
+      "id": 11529,
+      "locationId": "462865",
+      "name": "Majang Rest Area(TongYeong), South Korea",
+      "status": "PLAN",
+      "address": {
+        "street": "82 Jungbu Expressway",
+        "city": "Icheon-si",
+        "state": "Majang-myeon",
+        "zip": null,
+        "countryId": 137,
+        "country": "South Korea",
+        "regionId": 102,
+        "region": "Asia Pacific"
+      },
+      "gps": {
+        "latitude": 37.266317,
+        "longitude": 127.404581
+      },
+      "stallCount": 0,
+      "counted": true,
+      "elevationMeters": 109,
+      "powerKilowatt": 325,
+      "solarCanopy": false,
+      "battery": false,
+      "otherEVs": false,
+      "statusDays": 0,
+      "urlDiscuss": false
+    },
+    {
       "id": 5628,
       "locationId": "mokpopormocubesupercharger",
       "name": "Mokpo, South Korea",
@@ -4076,7 +4214,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 410,
+      "statusDays": 0,
       "urlDiscuss": true
     },
     {
@@ -4234,6 +4372,47 @@
       }
     },
     {
+      "id": 11453,
+      "locationId": "485602",
+      "name": "Paju-si, South Korea - Jayu-ro",
+      "status": "OPEN",
+      "address": {
+        "street": "2210 Jayu-ro",
+        "city": "Paju-si",
+        "state": "Gyeonggi-do",
+        "zip": "10881",
+        "countryId": 137,
+        "country": "South Korea",
+        "regionId": 102,
+        "region": "Asia Pacific"
+      },
+      "gps": {
+        "latitude": 37.6985,
+        "longitude": 126.6837
+      },
+      "dateOpened": "2026-06-11",
+      "stallCount": 8,
+      "counted": true,
+      "elevationMeters": 13,
+      "powerKilowatt": 250,
+      "solarCanopy": false,
+      "battery": false,
+      "otherEVs": true,
+      "statusDays": 0,
+      "urlDiscuss": true,
+      "stalls": {
+        "v4": 8,
+        "trailerFriendly": 0
+      },
+      "plugs": {
+        "nacs": 8,
+        "ccs1": 8,
+        "multi": 8
+      },
+      "parkingId": 1,
+      "facilityName": "Paju Publishing City Rest Area"
+    },
+    {
       "id": 8558,
       "locationId": "4005360",
       "name": "Pocheon, South Korea",
@@ -4259,7 +4438,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 613,
+      "statusDays": 0,
       "urlDiscuss": true
     },
     {
@@ -4637,7 +4816,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 613,
+      "statusDays": 0,
       "urlDiscuss": true
     },
     {
@@ -5487,6 +5666,44 @@
       }
     },
     {
+      "id": 11526,
+      "locationId": "487273",
+      "name": "Seoul, South Korea - Gonghang-daero",
+      "status": "OPEN",
+      "address": {
+        "street": "247 Gonghang-daero",
+        "city": "Gangseo-gu",
+        "state": "Gyeongsangnam-do",
+        "zip": "07803",
+        "countryId": 137,
+        "country": "South Korea",
+        "regionId": 102,
+        "region": "Asia Pacific"
+      },
+      "gps": {
+        "latitude": 37.559616,
+        "longitude": 126.835982
+      },
+      "dateOpened": "2026-06-12",
+      "stallCount": 8,
+      "counted": true,
+      "elevationMeters": 7,
+      "powerKilowatt": 250,
+      "solarCanopy": false,
+      "battery": false,
+      "otherEVs": true,
+      "statusDays": 0,
+      "urlDiscuss": true,
+      "stalls": {
+        "v4": 8
+      },
+      "plugs": {
+        "nacs": 8,
+        "ccs1": 8,
+        "multi": 8
+      }
+    },
+    {
       "id": 3462,
       "locationId": "gurosupercharger",
       "name": "Seoul, South Korea - Guro G Tower",
@@ -5628,7 +5845,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 707,
+      "statusDays": 0,
       "urlDiscuss": false,
       "stalls": {
         "v2": 6
@@ -6086,7 +6303,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 605,
+      "statusDays": 0,
       "urlDiscuss": true
     },
     {
@@ -6270,7 +6487,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 176,
+      "statusDays": 0,
       "urlDiscuss": true
     },
     {
@@ -6299,7 +6516,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 176,
+      "statusDays": 0,
       "urlDiscuss": true
     },
     {
@@ -6328,7 +6545,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 319,
+      "statusDays": 0,
       "urlDiscuss": true
     },
     {
@@ -6600,7 +6817,8 @@
         "nacs": 0,
         "ccs1": 8,
         "multi": 8
-      }
+      },
+      "osmId": 13688592003
     },
     {
       "id": 6552,
@@ -6640,6 +6858,35 @@
         "ccs1": 8,
         "multi": 8
       }
+    },
+    {
+      "id": 11524,
+      "locationId": "486104",
+      "name": "Tongyeong-si, South Korea",
+      "status": "VOTING",
+      "address": {
+        "street": "1574-46 Jungnim-ri",
+        "city": "Tongyeong-si",
+        "state": "Gyeongsangnam-do",
+        "zip": null,
+        "countryId": 137,
+        "country": "South Korea",
+        "regionId": 102,
+        "region": "Asia Pacific"
+      },
+      "gps": {
+        "latitude": 34.881543,
+        "longitude": 128.422177
+      },
+      "stallCount": 0,
+      "counted": true,
+      "elevationMeters": 1,
+      "powerKilowatt": 325,
+      "solarCanopy": false,
+      "battery": false,
+      "otherEVs": false,
+      "statusDays": 0,
+      "urlDiscuss": false
     },
     {
       "id": 7396,
@@ -6683,36 +6930,40 @@
     {
       "id": 8560,
       "locationId": "31863",
-      "name": "Uljin County, South Korea",
-      "status": "CONSTRUCTION",
+      "name": "Uljin County, South Korea - Eupnae-ri",
+      "status": "OPEN",
       "address": {
-        "street": "X",
+        "street": "35-10 Eupnae-ri",
         "city": "Uljin County",
         "state": "North Gyeongsang",
-        "zip": null,
+        "zip": "767801",
         "countryId": 137,
         "country": "South Korea",
         "regionId": 102,
         "region": "Asia Pacific"
       },
       "gps": {
-        "latitude": 36.970802,
-        "longitude": 129.401242
+        "latitude": 36.990721,
+        "longitude": 129.404196
       },
-      "stallCount": 8,
+      "dateOpened": "2026-06-12",
+      "stallCount": 4,
       "counted": true,
-      "elevationMeters": 5,
+      "elevationMeters": 16,
       "powerKilowatt": 250,
       "solarCanopy": false,
       "battery": false,
-      "otherEVs": false,
-      "statusDays": 19,
+      "otherEVs": true,
+      "statusDays": 0,
       "urlDiscuss": true,
       "stalls": {
-        "v4": 8
+        "v4": 4,
+        "trailerFriendly": 0
       },
       "plugs": {
-        "nacs": 8
+        "nacs": 4,
+        "ccs1": 4,
+        "multi": 4
       }
     },
     {
@@ -7088,7 +7339,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 613,
+      "statusDays": 0,
       "urlDiscuss": true
     },
     {
@@ -7117,7 +7368,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": false,
-      "statusDays": 613,
+      "statusDays": 0,
       "urlDiscuss": true
     },
     {
@@ -7224,7 +7475,7 @@
       "solarCanopy": false,
       "battery": false,
       "otherEVs": true,
-      "statusDays": 176,
+      "statusDays": 0,
       "urlDiscuss": true
     },
     {
@@ -7341,43 +7592,6 @@
         "ccs1": 8,
         "multi": 8
       }
-    },
-    {
-      "id": 11453,
-      "name": "Paju, South Korea - Gyeonggi",
-      "status": "CONSTRUCTION",
-      "address": {
-        "street": "495-122 Munbal-dong",
-        "city": "Paju-si",
-        "state": "Gyeonggi-do",
-        "zip": null,
-        "countryId": 137,
-        "country": "South Korea",
-        "regionId": 102,
-        "region": "Asia Pacific"
-      },
-      "gps": {
-        "latitude": 37.698719,
-        "longitude": 126.683592
-      },
-      "stallCount": 8,
-      "counted": true,
-      "elevationMeters": 12,
-      "powerKilowatt": 325,
-      "solarCanopy": false,
-      "battery": false,
-      "otherEVs": false,
-      "statusDays": 2,
-      "urlDiscuss": true,
-      "stalls": {
-        "v4": 8,
-        "trailerFriendly": 0
-      },
-      "plugs": {
-        "nacs": 8
-      },
-      "parkingId": 1,
-      "facilityName": "Paju Book City Service Area"
     }
   ]
 }
