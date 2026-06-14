@@ -1,7 +1,7 @@
 {
   "pageId": null,
-  "pageSize": 201,
-  "recordCount": 201,
+  "pageSize": 202,
+  "recordCount": 202,
   "recordCountTotal": 22476,
   "results": [
     {
@@ -3282,7 +3282,7 @@
       }
     },
     {
-      "id": 3594,
+      "id": 103594,
       "locationId": "dongtansupercharger",
       "name": "Hwaseong, South Korea - Dongtan Lotte Department Store",
       "status": "OPEN",
@@ -3300,7 +3300,7 @@
         "latitude": 37.200809,
         "longitude": 127.097418
       },
-      "dateOpened": "2021-08-19",
+      "dateOpened": "2026-05-04",
       "stallCount": 8,
       "counted": true,
       "elevationMeters": 52,
@@ -3318,7 +3318,48 @@
         "nacs": 8,
         "ccs1": 8,
         "multi": 8
-      }
+      },
+      "dateClosed": null
+    },
+    {
+      "id": 3594,
+      "locationId": "dongtansupercharger",
+      "name": "Hwaseong, South Korea - Dongtan Lotte Department Store (V3)",
+      "status": "OPEN",
+      "address": {
+        "street": "160, Dongtanyeok-ro, Hwaseong-si, Gyeonggi-do",
+        "city": "Hwaseong",
+        "state": "Gyeonggi",
+        "zip": null,
+        "countryId": 137,
+        "country": "South Korea",
+        "regionId": 102,
+        "region": "Asia Pacific"
+      },
+      "gps": {
+        "latitude": 37.200809,
+        "longitude": 127.097418
+      },
+      "dateOpened": "2021-08-19",
+      "stallCount": 3,
+      "counted": true,
+      "elevationMeters": 52,
+      "powerKilowatt": 250,
+      "solarCanopy": false,
+      "battery": false,
+      "otherEVs": true,
+      "statusDays": 0,
+      "urlDiscuss": true,
+      "stalls": {
+        "v3": 3
+      },
+      "plugs": {
+        "tpc": 3,
+        "nacs": 0,
+        "ccs1": 3,
+        "multi": 3
+      },
+      "dateClosed": "2026-05-04"
     },
     {
       "id": 6081,
