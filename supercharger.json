@@ -1,8 +1,8 @@
 {
   "pageId": null,
-  "pageSize": 202,
-  "recordCount": 202,
-  "recordCountTotal": 22476,
+  "pageSize": 201,
+  "recordCount": 201,
+  "recordCountTotal": 22475,
   "results": [
     {
       "id": 6109,
@@ -3282,7 +3282,7 @@
       }
     },
     {
-      "id": 103594,
+      "id": 3594,
       "locationId": "dongtansupercharger",
       "name": "Hwaseong, South Korea - Dongtan Lotte Department Store",
       "status": "OPEN",
@@ -3300,7 +3300,7 @@
         "latitude": 37.200809,
         "longitude": 127.097418
       },
-      "dateOpened": "2026-05-04",
+      "dateOpened": "2021-08-19",
       "stallCount": 8,
       "counted": true,
       "elevationMeters": 52,
@@ -3318,48 +3318,7 @@
         "nacs": 8,
         "ccs1": 8,
         "multi": 8
-      },
-      "dateClosed": null
-    },
-    {
-      "id": 3594,
-      "locationId": "dongtansupercharger",
-      "name": "Hwaseong, South Korea - Dongtan Lotte Department Store (V3)",
-      "status": "OPEN",
-      "address": {
-        "street": "160, Dongtanyeok-ro, Hwaseong-si, Gyeonggi-do",
-        "city": "Hwaseong",
-        "state": "Gyeonggi",
-        "zip": null,
-        "countryId": 137,
-        "country": "South Korea",
-        "regionId": 102,
-        "region": "Asia Pacific"
-      },
-      "gps": {
-        "latitude": 37.200809,
-        "longitude": 127.097418
-      },
-      "dateOpened": "2021-08-19",
-      "stallCount": 3,
-      "counted": true,
-      "elevationMeters": 52,
-      "powerKilowatt": 250,
-      "solarCanopy": false,
-      "battery": false,
-      "otherEVs": true,
-      "statusDays": 0,
-      "urlDiscuss": true,
-      "stalls": {
-        "v3": 3
-      },
-      "plugs": {
-        "tpc": 3,
-        "nacs": 0,
-        "ccs1": 3,
-        "multi": 3
-      },
-      "dateClosed": "2026-05-04"
+      }
     },
     {
       "id": 6081,
@@ -6505,31 +6464,41 @@
     {
       "id": 10834,
       "locationId": "462966",
-      "name": "Siheung Haneul Rest Area (Ilsan), South Korea",
-      "status": "PLAN",
+      "name": "Siheung, South Korea - Expressway No.100",
+      "status": "OPEN",
       "address": {
-        "street": "수도권 제1순환고속도로 105-1",
+        "street": "Capital Region First Ring 105-1",
         "city": "Siheung",
         "state": "Gyeonggi",
-        "zip": null,
+        "zip": "14983",
         "countryId": 137,
         "country": "South Korea",
         "regionId": 102,
         "region": "Asia Pacific"
       },
       "gps": {
-        "latitude": 37.385384,
-        "longitude": 126.855877
+        "latitude": 37.384386,
+        "longitude": 126.856749
       },
-      "stallCount": 0,
+      "stallCount": 4,
       "counted": true,
-      "elevationMeters": 49,
+      "elevationMeters": 52,
       "powerKilowatt": 250,
       "solarCanopy": false,
       "battery": false,
-      "otherEVs": false,
+      "otherEVs": true,
       "statusDays": 0,
-      "urlDiscuss": true
+      "urlDiscuss": true,
+      "dateOpened": "2026-07-06",
+      "stalls": {
+        "v4": 4,
+        "trailerFriendly": 0
+      },
+      "plugs": {
+        "nacs": 4,
+        "ccs1": 4,
+        "multi": 4
+      }
     },
     {
       "id": 10835,
