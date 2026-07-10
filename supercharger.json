@@ -7,7 +7,7 @@
     {
       "id": 6109,
       "locationId": "31726",
-      "name": "Andong, South Korea",
+      "name": "안동",
       "status": "OPEN",
       "address": {
         "street": "212-1 Nori, Andong-si",
@@ -46,7 +46,7 @@
     {
       "id": 8556,
       "locationId": "31762",
-      "name": "Ansan, South Korea - Gwangdeok4",
+      "name": "안산 - 광덕4",
       "status": "OPEN",
       "address": {
         "street": "237 Gwangdeok4-ro",
@@ -84,7 +84,7 @@
     {
       "id": 4395,
       "locationId": "anseongsupercharger",
-      "name": "Anseong, South Korea",
+      "name": "안성",
       "status": "OPEN",
       "address": {
         "street": "Anseong Livestock Agricultural Cooperative Federation 833, Anseong Maum-daero",
@@ -123,7 +123,7 @@
     {
       "id": 3793,
       "locationId": "gyeonggianyangsupercharger",
-      "name": "Anyang, South Korea - Pyeongchon",
+      "name": "안양 - 평촌",
       "status": "OPEN",
       "address": {
         "street": "33, Gwanpyeong-ro 170beon-gil, Dongan-gu",
@@ -160,7 +160,7 @@
     {
       "id": 5051,
       "locationId": "teslabucheonlottedepartmentsupercharger",
-      "name": "Bucheon, South Korea",
+      "name": "부천",
       "status": "OPEN",
       "address": {
         "street": "Lotte Department Store Jungdong Branch 300, Gilju-ro, Bucheon-si, Gyeonggi-do",
@@ -199,7 +199,7 @@
     {
       "id": 5052,
       "locationId": "teslabusanhaewondaelottedepartmentcentumcitysupercharger",
-      "name": "Busan, South Korea - Centum City",
+      "name": "부산 - 센텀시티",
       "status": "OPEN",
       "address": {
         "street": "Lotte Department Store Centum City 59, Centum Nam-daero, Haeundae-gu",
@@ -238,7 +238,7 @@
     {
       "id": 2223,
       "locationId": "busangangseosupercharger",
-      "name": "Busan, South Korea - Gangseo",
+      "name": "부산 - 강서",
       "status": "CLOSED_TEMP",
       "address": {
         "street": "361-68 Daejeo 1-dong, Gangseo-gu, Busan",
@@ -274,7 +274,7 @@
     {
       "id": 4564,
       "locationId": "busangijangsupercharger",
-      "name": "Busan, South Korea - Gijang",
+      "name": "부산 - 기장",
       "status": "OPEN",
       "address": {
         "street": "Lotte Premium Outlet Dongbusan Branch 147",
@@ -313,7 +313,7 @@
     {
       "id": 6392,
       "locationId": "31739",
-      "name": "Busan, South Korea - Hadan Artmalling",
+      "name": "부산 - 하단 아트몰링",
       "status": "OPEN",
       "address": {
         "street": "Busan Nakdongnam-ro 1413 49311",
@@ -352,7 +352,7 @@
     {
       "id": 1196,
       "locationId": "busansupercharger",
-      "name": "Busan, South Korea - Haewoondae Paradise",
+      "name": "부산 - 해운대 파라다이스",
       "status": "OPEN",
       "address": {
         "street": "296 Haeundae Beach-ro, Haeundae-gu, Busan",
@@ -392,7 +392,7 @@
     {
       "id": 6167,
       "locationId": "36054",
-      "name": "Busan, South Korea - KNN Tower",
+      "name": "부산 - KNN타워",
       "status": "CLOSED_PERM",
       "address": {
         "street": "30 Centumseo-ro, Busan U 2(i)-dong",
@@ -430,7 +430,7 @@
     {
       "id": 2224,
       "locationId": "busannamgusupercharger",
-      "name": "Busan, South Korea - Namgu IFC",
+      "name": "부산 - 남구 IFC",
       "status": "OPEN",
       "address": {
         "street": "133, Jeonpo-daero, Nam-gu, Busan",
@@ -467,7 +467,7 @@
     {
       "id": 5049,
       "locationId": "teslabusanhotelnongshimsupercharger",
-      "name": "Busan, South Korea - Nongshim Hotel",
+      "name": "부산 - 농심호텔",
       "status": "OPEN",
       "address": {
         "street": "Hotel Nongshim 23, Geumganggongwon-ro 20beon-gil, Dongnae-gu",
@@ -508,7 +508,7 @@
     {
       "id": 2503,
       "locationId": "busanservice",
-      "name": "Busan, South Korea - Yeonje",
+      "name": "부산 - 연제",
       "status": "OPEN",
       "address": {
         "street": "290 Jwasuyeong-ro, Yeonje-gu",
@@ -545,7 +545,7 @@
     {
       "id": 4104,
       "locationId": "buyeosupercharger",
-      "name": "Buyeo, South Korea - Lotte Premium Outlet",
+      "name": "부여 - 롯데프리미엄아울렛",
       "status": "OPEN",
       "address": {
         "street": "Lotte Outlet Buyeo 387, Baekjemun-ro, Gyuam-myeon",
@@ -584,7 +584,7 @@
     {
       "id": 4146,
       "locationId": "changwonsupercharger",
-      "name": "Changwon, South Korea",
+      "name": "창원",
       "status": "OPEN",
       "address": {
         "street": "Emporium Building 13, Jungang-daero 100beon-gil, Seongsan-gu",
@@ -621,7 +621,7 @@
     {
       "id": 5814,
       "locationId": "cheonancentralchurch",
-      "name": "Cheonan, South Korea - Central Church",
+      "name": "천안 - 중앙교회",
       "status": "OPEN",
       "address": {
         "street": "27 Budaejungang-gil, Cheonan",
@@ -660,7 +660,7 @@
     {
       "id": 10010,
       "locationId": "31815",
-      "name": "Cheonan, South Korea - Moda Outlet",
+      "name": "천안 - 모다아울렛",
       "status": "OPEN",
       "address": {
         "street": "196 Gongwon-ro",
@@ -700,7 +700,7 @@
     {
       "id": 1116,
       "locationId": "3433",
-      "name": "Cheonan, South Korea - Sono Belle",
+      "name": "천안 - 소노벨",
       "status": "OPEN",
       "address": {
         "street": "Cheonan-si, Chungcheongnam-do 200",
@@ -738,7 +738,7 @@
     {
       "id": 3946,
       "locationId": "cheongdosupercharger",
-      "name": "Cheongdo, South Korea",
+      "name": "청도",
       "status": "OPEN",
       "address": {
         "street": "1376, Saemaeul-ro, Cheongdo-eup",
@@ -775,7 +775,7 @@
     {
       "id": 4142,
       "locationId": "cheongjusupercharger",
-      "name": "Cheongju, South Korea",
+      "name": "청주",
       "status": "OPEN",
       "address": {
         "street": "345-1 Yullyang.sacheon-dong, Sangdang-gu",
@@ -814,7 +814,7 @@
     {
       "id": 7228,
       "locationId": "seocheongjureindeercoffee",
-      "name": "Cheongju, South Korea - Gangseo",
+      "name": "청주 - 강서",
       "status": "OPEN",
       "address": {
         "street": "Gaposan-ro 191",
@@ -853,7 +853,7 @@
     {
       "id": 4396,
       "locationId": "chuncheonsupercharger",
-      "name": "Chuncheon, South Korea - ENTA 2022",
+      "name": "춘천 - 엔타2022",
       "status": "OPEN",
       "address": {
         "street": "ENTA2022, 120 Husok-ro",
@@ -892,7 +892,7 @@
     {
       "id": 3332,
       "locationId": "chungjusupercharger",
-      "name": "Chungju, South Korea - Daesowon Home Mart",
+      "name": "충주 - 대소원 홈마트",
       "status": "OPEN",
       "address": {
         "street": "26, Enterprise City-ro, Chungju-si, Chungcheongbuk-do",
@@ -929,7 +929,7 @@
     {
       "id": 5054,
       "locationId": "chungjumodaoutletsupercharger",
-      "name": "Chungju, South Korea - Moda Outlet",
+      "name": "충주 - 모다아울렛",
       "status": "OPEN",
       "address": {
         "street": "3683, Jungwon-daero, Chungju-si, Chungcheongbuk-do",
@@ -968,7 +968,7 @@
     {
       "id": 3476,
       "locationId": "daeguhyuksinlsupercharger",
-      "name": "Daegu, South Korea - Esiapolis",
+      "name": "대구 - 이시아폴리스",
       "status": "OPEN",
       "address": {
         "street": "16, Palgong-ro 49-gil, Dong-gu, Daegu",
@@ -1007,7 +1007,7 @@
     {
       "id": 1154,
       "locationId": "daegusupercharger",
-      "name": "Daegu, South Korea - EXCO",
+      "name": "대구 - 엑스코",
       "status": "OPEN",
       "address": {
         "street": "10, EXCO-ro, Buk-gu, Daegu",
@@ -1044,7 +1044,7 @@
     {
       "id": 4143,
       "locationId": "daegususeongsupercharger",
-      "name": "Daegu, South Korea - Suseong",
+      "name": "대구 - 수성",
       "status": "OPEN",
       "address": {
         "street": "Daegu Suseong Art Square, 18, Suseongmot 6-gil",
@@ -1082,7 +1082,7 @@
     {
       "id": 6242,
       "locationId": "31771",
-      "name": "Daegwallyeong, South Korea",
+      "name": "대관령",
       "status": "OPEN",
       "address": {
         "street": "Pyeongchang-gun Gyeonggang-ro 5754 25342 Daegwalnyeong-myeon",
@@ -1121,7 +1121,7 @@
     {
       "id": 3886,
       "locationId": "Daejeon",
-      "name": "Daejeon Seogu, South Korea",
+      "name": "대전 서구",
       "status": "OPEN",
       "address": {
         "street": "598, Gyeryong-ro, Seo-gu",
@@ -1160,7 +1160,7 @@
     {
       "id": 9309,
       "locationId": "32978",
-      "name": "Daejeon, South Korea - Convention Center",
+      "name": "대전 - 컨벤션센터",
       "status": "OPEN",
       "address": {
         "street": "107 Expo-ro",
@@ -1198,7 +1198,7 @@
     {
       "id": 10008,
       "locationId": "31719",
-      "name": "Daejeon, South Korea - Moda Outlet",
+      "name": "대전 - 모다아울렛",
       "status": "OPEN",
       "address": {
         "street": "5, Daejeong-ro",
@@ -1238,7 +1238,7 @@
     {
       "id": 2215,
       "locationId": "dangjinsupercharger",
-      "name": "Dangjin, South Korea",
+      "name": "당진",
       "status": "OPEN",
       "address": {
         "street": "63, Songak-ro, Songak-eup",
@@ -1276,7 +1276,7 @@
     {
       "id": 11528,
       "locationId": "463019",
-      "name": "Deokpyeong Rest Area(Gangneung), South Korea",
+      "name": "덕평휴게소(강릉)",
       "status": "PLAN",
       "address": {
         "street": "319 Gakpyeong-ri",
@@ -1305,7 +1305,7 @@
     {
       "id": 11527,
       "locationId": "450864",
-      "name": "Deokpyeong Rest Area(Incheon), South Korea",
+      "name": "덕평휴게소(인천)",
       "status": "PLAN",
       "address": {
         "street": "287-76 Deogi-ro",
@@ -1334,7 +1334,7 @@
     {
       "id": 5940,
       "locationId": "58507",
-      "name": "Donghae, South Korea",
+      "name": "동해",
       "status": "OPEN",
       "address": {
         "street": "361-1 Cheongok-dong, Donghae-si, 25750",
@@ -1373,7 +1373,7 @@
     {
       "id": 3627,
       "locationId": "euiwangsupercharger",
-      "name": "Euiwang, South Korea - Lotte Time Villas",
+      "name": "의왕 - 롯데타임빌라스",
       "status": "OPEN",
       "address": {
         "street": "1039, Hakui-dong",
@@ -1412,7 +1412,7 @@
     {
       "id": 6131,
       "locationId": "31723",
-      "name": "Eumseong, South Korea - Daeso",
+      "name": "음성 - 대소",
       "status": "OPEN",
       "address": {
         "street": "Eumseong-gun Daeseong-ro 77beon-gil 25-18",
@@ -1451,7 +1451,7 @@
     {
       "id": 5980,
       "locationId": "33628",
-      "name": "Eumseong, South Korea - Geumwang",
+      "name": "음성 - 금왕",
       "status": "OPEN",
       "address": {
         "street": "1356 Daegeum-ro, Eumseong-gun 27638 Gamgok-myeon",
@@ -1490,7 +1490,7 @@
     {
       "id": 6583,
       "locationId": "4005316",
-      "name": "Ganghwa, South Korea - Seaside Resort",
+      "name": "강화 - 시사이드리조트",
       "status": "OPEN",
       "address": {
         "street": "Ganghwa Jangheung-ro 217 23052 Gilsang-myeon",
@@ -1529,7 +1529,7 @@
     {
       "id": 1396,
       "locationId": "gangneungsupercharger",
-      "name": "Gangneung, South Korea - Lakai Sandpine",
+      "name": "강릉 - 라카이 샌드파인",
       "status": "OPEN",
       "address": {
         "street": "536 Haean-ro, Gangneung-si, Gangwon-do",
@@ -1566,7 +1566,7 @@
     {
       "id": 5762,
       "locationId": "gangneungsaintjohnshotelkr",
-      "name": "Gangneung, South Korea - Saint Johns Hotel",
+      "name": "강릉 - 세인트존스 호텔",
       "status": "OPEN",
       "address": {
         "street": "307 Changhae-ro, Gangneung-si",
@@ -1605,7 +1605,7 @@
     {
       "id": 5761,
       "locationId": "Gangneungterarosa",
-      "name": "Gangneung, South Korea - Terarosa",
+      "name": "강릉 - 테라로사",
       "status": "OPEN",
       "address": {
         "street": "Gangneung 25, Hyeoncheon-gil, Gujeong-myeon 25",
@@ -1644,7 +1644,7 @@
     {
       "id": 10045,
       "locationId": "450961",
-      "name": "Gapyeong, South Korea - Gapyeong Rest Area (Chuncheon)",
+      "name": "가평 - 가평휴게소(춘천)",
       "status": "OPEN",
       "address": {
         "street": "511 Misari-ro",
@@ -1685,7 +1685,7 @@
     {
       "id": 10046,
       "locationId": "451014",
-      "name": "Gapyeong, South Korea - Gapyeong Rest Area (Seoul)",
+      "name": "가평 - 가평휴게소(서울)",
       "status": "OPEN",
       "address": {
         "street": "544 Misari-ro",
@@ -1726,7 +1726,7 @@
     {
       "id": 2225,
       "locationId": "gapyeongsupercharger",
-      "name": "Gapyeong, South Korea - Seorak",
+      "name": "가평 - 설악",
       "status": "CLOSED_TEMP",
       "address": {
         "street": "3 Misari-ro, Seorak-myeon, Gapyeong-gun, Gyeonggi-do",
@@ -1763,7 +1763,7 @@
     {
       "id": 11525,
       "locationId": "30996",
-      "name": "Geoje, South Korea",
+      "name": "거제",
       "status": "VOTING",
       "address": {
         "street": "12 Junggok-ro 2-gil",
@@ -1792,7 +1792,7 @@
     {
       "id": 5507,
       "locationId": "34277",
-      "name": "Gimcheon, South Korea - Moda Outlet",
+      "name": "김천 - 모다아울렛",
       "status": "OPEN",
       "address": {
         "street": "1417, Apo-daero, Apo-eup, Gimcheon-si, Gyeongsangbuk-do",
@@ -1832,7 +1832,7 @@
     {
       "id": 11260,
       "locationId": "459680",
-      "name": "Gimhae, South Korea - JangYu-ro",
+      "name": "김해 - 장유로",
       "status": "OPEN",
       "address": {
         "street": "469 JangYu-ro",
@@ -1872,7 +1872,7 @@
     {
       "id": 9310,
       "locationId": "447004",
-      "name": "Gimhae, South Korea - JinYeong Complex Rest Area (Busan)",
+      "name": "김해 - 진영복합휴게소(부산)",
       "status": "OPEN",
       "address": {
         "street": "94-4 Hagye-ro 96 beon-gil Jinyeong-eup",
@@ -1910,7 +1910,7 @@
     {
       "id": 7656,
       "locationId": "31714",
-      "name": "Gimhae, South Korea - Juchon",
+      "name": "김해 - 주촌",
       "status": "OPEN",
       "address": {
         "street": "1566-3 Cheongok-ri",
@@ -1948,7 +1948,7 @@
     {
       "id": 3928,
       "locationId": "gimposupercharger",
-      "name": "Gimpo, South Korea - Gurae",
+      "name": "김포 - 구래",
       "status": "OPEN",
       "address": {
         "street": "Karim Avenue Gimpo 487, Gimpo Hangang 4-ro",
@@ -1985,7 +1985,7 @@
     {
       "id": 10825,
       "locationId": "461102",
-      "name": "Gongju, South Korea - 27 Nonsan Cheonan Expressway",
+      "name": "공주 - 논산천안고속도로 27",
       "status": "OPEN",
       "address": {
         "street": "27 Nonsan Cheonan Expressway",
@@ -2026,7 +2026,7 @@
     {
       "id": 10828,
       "locationId": "461153",
-      "name": "Gongju, South Korea - 57 Nonsan Cheonan Expressway",
+      "name": "공주 - 논산천안고속도로 57",
       "status": "OPEN",
       "address": {
         "street": "57 Nonsan Cheonan Expressway",
@@ -2065,7 +2065,7 @@
     {
       "id": 10827,
       "locationId": "461152",
-      "name": "Gongju, South Korea - 58 Nonsan Cheonan Expressway",
+      "name": "공주 - 논산천안고속도로 58",
       "status": "OPEN",
       "address": {
         "street": "58 Nonsan Cheonan Expressway",
@@ -2106,7 +2106,7 @@
     {
       "id": 10826,
       "locationId": "461003",
-      "name": "Gongju, South Korea - Nonsan Cheonan Expressway",
+      "name": "공주 - 논산천안고속도로",
       "status": "OPEN",
       "address": {
         "street": "32 Nonsan Cheonan Expressway",
@@ -2145,7 +2145,7 @@
     {
       "id": 5726,
       "locationId": "goseongoceantoyou",
-      "name": "Goseong, South Korea - Ocean to You Resort",
+      "name": "고성 - 오션투유리조트",
       "status": "OPEN",
       "address": {
         "street": "9, Sampohaebyeon-gil, Goseong-gun",
@@ -2184,7 +2184,7 @@
     {
       "id": 1528,
       "locationId": "goyangsupercharger",
-      "name": "Goyang, South Korea",
+      "name": "고양",
       "status": "OPEN",
       "address": {
         "street": "Ilsandong-gu, Janghang 1(il)-dong, 1245 -dong",
@@ -2221,7 +2221,7 @@
     {
       "id": 5050,
       "locationId": "teslagoyangdonaedongsupercharger",
-      "name": "Goyang, South Korea - Donaedong",
+      "name": "고양 - 도내동",
       "status": "OPEN",
       "address": {
         "street": "449, Gwonyul-daero, Deogyang-gu, Goyang-si, Gyeonggi-do",
@@ -2260,7 +2260,7 @@
     {
       "id": 6123,
       "locationId": "31758",
-      "name": "Goyang, South Korea - Haengju",
+      "name": "고양 - 행주",
       "status": "OPEN",
       "address": {
         "street": "487 Jayu-ro, Goyang-si",
@@ -2299,7 +2299,7 @@
     {
       "id": 3283,
       "locationId": "ilsansupercharger",
-      "name": "Goyang, South Korea - Ilsan N2Wash",
+      "name": "고양 - 일산 N2워시",
       "status": "OPEN",
       "address": {
         "street": "31 Janghang-ro, Goyang-si, Gyeonggi-do 1043",
@@ -2336,7 +2336,7 @@
     {
       "id": 5739,
       "locationId": "goyangilsanonemount",
-      "name": "Goyang, South Korea - OneMount",
+      "name": "고양 - 원마운트",
       "status": "OPEN",
       "address": {
         "street": "Ilsan Hallyu World-ro 300",
@@ -2375,7 +2375,7 @@
     {
       "id": 6021,
       "locationId": "31725",
-      "name": "Gumi, South Korea - Hyeonggok",
+      "name": "구미 - 형곡",
       "status": "OPEN",
       "address": {
         "street": "74-4 Saemaeul-ro, Gumi-si",
@@ -2414,7 +2414,7 @@
     {
       "id": 5738,
       "locationId": "gunpogeumjeongakplaza",
-      "name": "Gunpo, South Korea - AK Plaza",
+      "name": "군포 - AK플라자",
       "status": "OPEN",
       "address": {
         "street": "143 LS-ro, Gunpo-si, Gyeonggi-do",
@@ -2453,7 +2453,7 @@
     {
       "id": 2029,
       "locationId": "gunsansupercharger",
-      "name": "Gunsan, South Korea",
+      "name": "군산",
       "status": "OPEN",
       "address": {
         "street": "1321 Beonyeong-ro, Daeya-myeon, Gunsan-si, Jeollabuk-do",
@@ -2490,7 +2490,7 @@
     {
       "id": 5048,
       "locationId": "gurisupercharger",
-      "name": "Guri, South Korea - Moda Outlet",
+      "name": "구리 - 모다아울렛",
       "status": "OPEN",
       "address": {
         "street": "Moda Outlet Guri Namyangju, 230, Gyeongchunbuk-ro, Guri-si, Gyeonggi-do",
@@ -2530,7 +2530,7 @@
     {
       "id": 10832,
       "locationId": "32963",
-      "name": "Gwacheon, Seoul",
+      "name": "과천",
       "status": "VOTING",
       "address": {
         "street": "x",
@@ -2559,7 +2559,7 @@
     {
       "id": 4114,
       "locationId": "gwanggyolakesupercharger",
-      "name": "Gwanggyo Joongang, South Korea",
+      "name": "광교중앙",
       "status": "OPEN",
       "address": {
         "street": "Lotte Outlet Gwanggyo Branch, 10, Docheong-ro, Yeongtong-gu, Suwon-si",
@@ -2598,7 +2598,7 @@
     {
       "id": 3778,
       "locationId": "gwanggyosupercharger",
-      "name": "Gwanggyo, South Korea",
+      "name": "광교",
       "status": "OPEN",
       "address": {
         "street": "269 ​​Beopjo-ro 149beon-gil, Suwon-si",
@@ -2635,7 +2635,7 @@
     {
       "id": 4334,
       "locationId": "gwangjucheomdansupercharger",
-      "name": "Gwangju, South Korea - Cheomdan",
+      "name": "광주 - 첨단",
       "status": "OPEN",
       "address": {
         "street": "694-28 Ssangam-dong",
@@ -2676,7 +2676,7 @@
     {
       "id": 1327,
       "locationId": "gwangjusupercharger",
-      "name": "Gwangju, South Korea - Holiday Inn",
+      "name": "광주 - 홀리데이인",
       "status": "OPEN",
       "address": {
         "street": "Sangmupyeonghwa-ro",
@@ -2713,7 +2713,7 @@
     {
       "id": 7211,
       "locationId": "31748",
-      "name": "Gwangju, South Korea - U Square",
+      "name": "광주 - 유스퀘어",
       "status": "OPEN",
       "address": {
         "street": "Gwangju Mujin-daero 904 61937",
@@ -2752,7 +2752,7 @@
     {
       "id": 3725,
       "locationId": "gwangmyeongsupercharger",
-      "name": "Gwangmyeong, South Korea - AK Plaza",
+      "name": "광명 - AK플라자",
       "status": "OPEN",
       "address": {
         "street": "U Planet 7, Yangji-ro",
@@ -2791,7 +2791,7 @@
     {
       "id": 5914,
       "locationId": "34662",
-      "name": "Gwangmyeong, South Korea - Gwangmyeong Station",
+      "name": "광명 - 광명역",
       "status": "OPEN",
       "address": {
         "street": "Gwangmyeong-si Iljik-dong 310-1 14347",
@@ -2830,7 +2830,7 @@
     {
       "id": 4291,
       "locationId": "gwangyangsupercharger",
-      "name": "Gwangyang, South Korea - LF Square",
+      "name": "광양 - LF스퀘어",
       "status": "OPEN",
       "address": {
         "street": "LF Square Gwangyang Terrace Mall, 466, Sungwang",
@@ -2867,7 +2867,7 @@
     {
       "id": 4348,
       "locationId": "gyeonggigwangjusupercharger",
-      "name": "Gyeonggi, South Korea - Gwangju",
+      "name": "경기 - 광주",
       "status": "OPEN",
       "address": {
         "street": "Nine Block Jungdae-dong 1967 Gyeongchung-daero,",
@@ -2904,7 +2904,7 @@
     {
       "id": 4394,
       "locationId": "gyeongjusupercharger",
-      "name": "Gyeongju, South Korea - Lahan Select",
+      "name": "경주 - 라한셀렉트",
       "status": "OPEN",
       "address": {
         "street": "Gyeongju 338, Bomun-ro",
@@ -2942,7 +2942,7 @@
     {
       "id": 11330,
       "locationId": "487364",
-      "name": "Gyeongju, South Korea - Seorabeol-daero",
+      "name": "경주 - 서라벌대로",
       "status": "OPEN",
       "address": {
         "street": "Seorabeol-daero 324",
@@ -2980,7 +2980,7 @@
     {
       "id": 7695,
       "locationId": "teslagyeongjub",
-      "name": "Gyeongju, South Korea - Silla Myeongga",
+      "name": "경주 - 신라명가",
       "status": "OPEN",
       "address": {
         "street": "Gyeongju-si Top-dong 676-1",
@@ -3018,7 +3018,7 @@
     {
       "id": 5055,
       "locationId": "hadongupercharger",
-      "name": "Hadong, South Korea",
+      "name": "하동",
       "status": "OPEN",
       "address": {
         "street": "13-1, Gangbyeon-gil, Jingyo-myeon, Hadong-gun, Gyeongsangnam-do",
@@ -3057,7 +3057,7 @@
     {
       "id": 6058,
       "locationId": "33026",
-      "name": "Haengdamdo Moda Outlet, South Korea",
+      "name": "행담도 모다아울렛",
       "status": "OPEN",
       "address": {
         "street": "Dangjin-si Seohaean Expressway 276 Sinpyeong-myeon",
@@ -3096,7 +3096,7 @@
     {
       "id": 2020,
       "locationId": "hamyangsupercharger",
-      "name": "Hamyang, South Korea",
+      "name": "함양",
       "status": "OPEN",
       "address": {
         "street": "298 Goun-ro, Hamyang-eup, Hamyang-gun, Gyeongsangnam-do",
@@ -3133,7 +3133,7 @@
     {
       "id": 6079,
       "locationId": "31741",
-      "name": "Hanam, South Korea - Misa",
+      "name": "하남 - 미사",
       "status": "OPEN",
       "address": {
         "street": "1143 Mangwol-dong, Hanam-si",
@@ -3172,7 +3172,7 @@
     {
       "id": 2226,
       "locationId": "hanamsupercharger",
-      "name": "Hanam, South Korea - Starfield",
+      "name": "하남 - 스타필드",
       "status": "OPEN",
       "address": {
         "street": "750 Misa-daero, Hanam-si, Gyeonggi-do",
@@ -3209,7 +3209,7 @@
     {
       "id": 3355,
       "locationId": "hwasungsupercharger",
-      "name": "Hwaseong, South Korea - BalAn",
+      "name": "화성 - 발안",
       "status": "OPEN",
       "address": {
         "street": "806 Seohae-ro, Hyangnam-eup, Hwaseong-si, Gyeonggi-do",
@@ -3246,7 +3246,7 @@
     {
       "id": 6394,
       "locationId": "32964",
-      "name": "Hwaseong, South Korea - Dongtan Granvia Star",
+      "name": "화성 - 동탄 그란비아스타",
       "status": "OPEN",
       "address": {
         "street": "Hwaseong-si Dongtandaero 446",
@@ -3284,7 +3284,7 @@
     {
       "id": 3594,
       "locationId": "dongtansupercharger",
-      "name": "Hwaseong, South Korea - Dongtan Lotte Department Store",
+      "name": "화성 - 동탄 롯데백화점",
       "status": "OPEN",
       "address": {
         "street": "160, Dongtanyeok-ro, Hwaseong-si, Gyeonggi-do",
@@ -3323,7 +3323,7 @@
     {
       "id": 6081,
       "locationId": "31704",
-      "name": "Hwaseong, South Korea - Dongtan-West Cafe Astana",
+      "name": "화성 - 동탄서 카페 아스타나",
       "status": "OPEN",
       "address": {
         "street": "Hwaseong-si Hyohaeng-ro 1203-8 18385",
@@ -3361,7 +3361,7 @@
     {
       "id": 6100,
       "locationId": "31728",
-      "name": "Icheon, South Korea - Termeden",
+      "name": "이천 - 터미덴",
       "status": "OPEN",
       "address": {
         "street": "984 Sasil-ro, Icheon-si 17406 Moga-myeon",
@@ -3400,7 +3400,7 @@
     {
       "id": 5573,
       "locationId": "imsilcheesepark",
-      "name": "Imsil, South Korea",
+      "name": "임실",
       "status": "OPEN",
       "address": {
         "street": "Imsil Cheese Theme Park 50, Doin 2-gil, Seongsu-myeon, Imsil-gun",
@@ -3439,7 +3439,7 @@
     {
       "id": 3949,
       "locationId": "cheongnasupercharger",
-      "name": "Incheon, South Korea - Chungra Square 7",
+      "name": "인천 - 춘라 스퀘어 7",
       "status": "OPEN",
       "address": {
         "street": "Cheongna Square Seven 76, Cheongrarubi-ro, Seo-gu, Incheon",
@@ -3479,7 +3479,7 @@
     {
       "id": 3729,
       "locationId": "dongchunsupercharger",
-      "name": "Incheon, South Korea - Dongchun",
+      "name": "인천 - 동춘",
       "status": "OPEN",
       "address": {
         "street": "825-25, Aam-daero, Yeonsu-gu",
@@ -3516,7 +3516,7 @@
     {
       "id": 3703,
       "locationId": "incheonmichuholsupercharger",
-      "name": "Incheon, South Korea - Michuhol Alleyway",
+      "name": "인천 - 미추홀 앨리웨이",
       "status": "OPEN",
       "address": {
         "street": "Ellyway Incheon, 12, Sukgol-ro 88beon-gil, Michuhol-gu",
@@ -3553,7 +3553,7 @@
     {
       "id": 7619,
       "locationId": "32562",
-      "name": "Incheon, South Korea - Moda Outlet",
+      "name": "인천 - 모다아울렛",
       "status": "OPEN",
       "address": {
         "street": "Incheon Bukhangro 32 beonan-gil 50 22769",
@@ -3592,7 +3592,7 @@
     {
       "id": 2222,
       "locationId": "songdoincheonsupercharger",
-      "name": "Incheon, South Korea - Songdo Triple Street",
+      "name": "인천 - 송도 트리플스트리트",
       "status": "OPEN",
       "address": {
         "street": "33-4 Songdo Gwahak-ro 16beon-gil, Incheon 21984",
@@ -3631,7 +3631,7 @@
     {
       "id": 5765,
       "locationId": "teslakrincheonyeongjonggrandhyatthoteleast",
-      "name": "Incheon, South Korea - Yeongjong Grand Hyatt East",
+      "name": "인천 - 영종 그랜드 하얏트 동관",
       "status": "OPEN",
       "address": {
         "street": "208 Yeongjonghaeannam-ro 321beon-gil, Incheon 22382",
@@ -3670,7 +3670,7 @@
     {
       "id": 5764,
       "locationId": "incheonyeongjonggrandhyatthotelwestkr",
-      "name": "Incheon, South Korea - Yeongjong Grand Hyatt West",
+      "name": "인천 - 영종 그랜드 하얏트 서관",
       "status": "OPEN",
       "address": {
         "street": "Yeongjonghaeannam-ro 321beon-gil, Incheon",
@@ -3709,7 +3709,7 @@
     {
       "id": 7146,
       "locationId": "32543",
-      "name": "Incheon, South Korea - Yeonsu",
+      "name": "인천 - 연수",
       "status": "OPEN",
       "address": {
         "street": "Yeonsu-gu Neungheodae-ro 16 21959",
@@ -3749,7 +3749,7 @@
     {
       "id": 5019,
       "locationId": "injesupercharger",
-      "name": "Inje, South Korea",
+      "name": "인제",
       "status": "OPEN",
       "address": {
         "street": "130, Sanghadap-ro, Kirin-myeon",
@@ -3788,7 +3788,7 @@
     {
       "id": 6672,
       "locationId": "4005124",
-      "name": "Jangheung, South Korea - Water Science Museum",
+      "name": "장흥 - 물과학박물관",
       "status": "OPEN",
       "address": {
         "street": "Jangheung Haengwongangbyeon-gil 20 59313",
@@ -3827,7 +3827,7 @@
     {
       "id": 3947,
       "locationId": "jecheonsupercharger",
-      "name": "Jecheon, South Korea",
+      "name": "제천",
       "status": "OPEN",
       "address": {
         "street": "Namjecheon IC Service Area 741, Cheongpungho-ro, Geumseong-myeon",
@@ -3864,7 +3864,7 @@
     {
       "id": 3745,
       "locationId": "JejuStore",
-      "name": "Jeju, South Korea - Jeju Store",
+      "name": "제주 - 제주스토어",
       "status": "OPEN",
       "address": {
         "street": "136, Yeonsam-ro",
@@ -3901,7 +3901,7 @@
     {
       "id": 4144,
       "locationId": "jeonjusupercharger",
-      "name": "Jeonju, South Korea",
+      "name": "전주",
       "status": "OPEN",
       "address": {
         "street": "45 Yongmeori-ro, Wansan-gu",
@@ -3940,7 +3940,7 @@
     {
       "id": 7435,
       "locationId": "32984",
-      "name": "Jeonju, South Korea - Migok Roastery",
+      "name": "전주 - 미곡 로스터리",
       "status": "OPEN",
       "address": {
         "street": "Jeonju-si Geumsang-gil, Deokjin-gu 10",
@@ -3979,7 +3979,7 @@
     {
       "id": 3356,
       "locationId": "jincheonsupercharger",
-      "name": "Jincheon, South Korea - Root Square",
+      "name": "진천 - 루트스퀘어",
       "status": "OPEN",
       "address": {
         "street": "02-1 Naechon-ri, Iwol-myeon, Jincheon-gun, Chungcheongbuk-do",
@@ -4016,7 +4016,7 @@
     {
       "id": 1804,
       "locationId": "jinjusksupercharger",
-      "name": "Jinju, South Korea - Lotte Mall",
+      "name": "진주 - 롯데몰",
       "status": "OPEN",
       "address": {
         "street": "440 Dongjin-ro, Jinju-si, Gyeongsangnam-do",
@@ -4055,7 +4055,7 @@
     {
       "id": 6449,
       "locationId": "31746",
-      "name": "Jinju, South Korea - Moda Outlet",
+      "name": "진주 - 모다아울렛",
       "status": "OPEN",
       "address": {
         "street": "Jinju Samil-ro 95beon-gil 46 52845 Jeongchon-myeon",
@@ -4094,7 +4094,7 @@
     {
       "id": 11530,
       "locationId": "463021",
-      "name": "Majang Rest Area(Hanam), South Korea",
+      "name": "마장휴게소(하남)",
       "status": "PLAN",
       "address": {
         "street": "82 Jungbu Expressway",
@@ -4123,7 +4123,7 @@
     {
       "id": 11529,
       "locationId": "462865",
-      "name": "Majang Rest Area(TongYeong), South Korea",
+      "name": "마장휴게소(통영)",
       "status": "PLAN",
       "address": {
         "street": "82 Jungbu Expressway",
@@ -4152,7 +4152,7 @@
     {
       "id": 5628,
       "locationId": "mokpopormocubesupercharger",
-      "name": "Mokpo, South Korea",
+      "name": "목포",
       "status": "OPEN",
       "address": {
         "street": "Mokpo Ogam-ro 95",
@@ -4191,7 +4191,7 @@
     {
       "id": 10831,
       "locationId": "57160",
-      "name": "Namyangju - Dasan, South Korea",
+      "name": "남양주 - 다산",
       "status": "VOTING",
       "address": {
         "street": "4347-22 Dasan-dong",
@@ -4220,7 +4220,7 @@
     {
       "id": 6881,
       "locationId": "Namyangjuhwadothisplane",
-      "name": "Namyangju, South Korea - Hwado This Plane",
+      "name": "남양주 - 화도 디스플레인",
       "status": "OPEN",
       "address": {
         "street": "Namyangju Soraebi-ro, Hwado-eup 48-24 12163 Hwado-eup",
@@ -4259,7 +4259,7 @@
     {
       "id": 2013,
       "locationId": "nonsansupercharger",
-      "name": "Nonsan, South Korea - Laon Village",
+      "name": "논산 - 라온빌리지",
       "status": "OPEN",
       "address": {
         "street": "36, Dongan-ro 1113beon-gil, Yeonmu-eup, Nonsan-si, Chungcheongnam-do",
@@ -4296,7 +4296,7 @@
     {
       "id": 8065,
       "locationId": "31740",
-      "name": "Osan, South Korea - Moda Outlet",
+      "name": "오산 - 모다아울렛",
       "status": "OPEN",
       "address": {
         "street": "822-22 Gyeonggidaero",
@@ -4335,7 +4335,7 @@
     {
       "id": 5751,
       "locationId": "superchargerpajumunsterdam",
-      "name": "Paju, South Korea - Munsterdam",
+      "name": "파주 - 문스테르담",
       "status": "OPEN",
       "address": {
         "street": "113-175 Unjeong-ro, Paju-si 10911 Unjeong 1(il)-dong",
@@ -4374,7 +4374,7 @@
     {
       "id": 11453,
       "locationId": "485602",
-      "name": "Paju-si, South Korea - Jayu-ro",
+      "name": "파주 - 자유로",
       "status": "OPEN",
       "address": {
         "street": "2210 Jayu-ro",
@@ -4415,7 +4415,7 @@
     {
       "id": 8558,
       "locationId": "4005360",
-      "name": "Pocheon, South Korea",
+      "name": "포천",
       "status": "VOTING",
       "address": {
         "street": "Hoguk-go",
@@ -4444,7 +4444,7 @@
     {
       "id": 4145,
       "locationId": "pohangsupercharger",
-      "name": "Pohang, South Korea",
+      "name": "포항",
       "status": "OPEN",
       "address": {
         "street": "507 Daeryeon-ri, Heunghae-eup, Buk-gu",
@@ -4481,7 +4481,7 @@
     {
       "id": 3864,
       "locationId": "pyeongchangsupercharger",
-      "name": "Pyeongchang, South Korea - Phoenix",
+      "name": "평창 - 휘닉스",
       "status": "OPEN",
       "address": {
         "street": "174, Taegi-ro, Bongpyeong-myeon",
@@ -4520,7 +4520,7 @@
     {
       "id": 10830,
       "locationId": "32971",
-      "name": "Pyeongchang-gun, South Korea - Tapgeori-gil",
+      "name": "평창 - 탑거리길",
       "status": "OPEN",
       "address": {
         "street": "63 Tapgeori-gil",
@@ -4559,7 +4559,7 @@
     {
       "id": 7655,
       "locationId": "33019",
-      "name": "Pyeongtaek, South Korea - AK Plaza",
+      "name": "평택 - AK플라자",
       "status": "OPEN",
       "address": {
         "street": "Pyeongtaek-ro 51 17917",
@@ -4598,7 +4598,7 @@
     {
       "id": 3903,
       "locationId": "pyeongtaeksupercharger",
-      "name": "Pyeongtaek, South Korea - Songtan",
+      "name": "평택 - 송탄",
       "status": "OPEN",
       "address": {
         "street": "1409, Cheongwon-ro",
@@ -4635,7 +4635,7 @@
     {
       "id": 5763,
       "locationId": "35990",
-      "name": "Samcheok, South Korea",
+      "name": "삼척",
       "status": "OPEN",
       "address": {
         "street": "Samcheok-si Donghae-daero 3852 3852",
@@ -4675,7 +4675,7 @@
     {
       "id": 1806,
       "locationId": "sangjusupercharger",
-      "name": "Sangju, South Korea",
+      "name": "상주",
       "status": "OPEN",
       "address": {
         "street": "4207, Gyeongsang-daero, Sangju-si, Gyeongsangbuk-do",
@@ -4715,7 +4715,7 @@
     {
       "id": 4105,
       "locationId": "sejongsupercharger",
-      "name": "Sejong, South Korea - AK Plaza",
+      "name": "세종 - AK플라자",
       "status": "OPEN",
       "address": {
         "street": "KT&G Sejong Tower C (AK PLAZA Sejong Fashion Hall) 20, Dasom 1-ro",
@@ -4754,7 +4754,7 @@
     {
       "id": 5574,
       "locationId": "31209",
-      "name": "Sejong, South Korea - Daepyeong",
+      "name": "세종 - 대평",
       "status": "OPEN",
       "address": {
         "street": "Sejong Jonghabundongjang-ro 29",
@@ -4793,7 +4793,7 @@
     {
       "id": 8557,
       "locationId": "4005125",
-      "name": "Seodaemoon, South Korea",
+      "name": "서대문",
       "status": "VOTING",
       "address": {
         "street": "Mangu-ro",
@@ -4822,7 +4822,7 @@
     {
       "id": 1440,
       "locationId": "seogwiposupercharger",
-      "name": "Seogwipo, South Korea - Lotte Hotel",
+      "name": "서귀포 - 롯데호텔",
       "status": "OPEN",
       "address": {
         "street": "Jungmungwangwang-ro72beon-gil Saekdal-dong",
@@ -4859,7 +4859,7 @@
     {
       "id": 2122,
       "locationId": "bundangsupercharger",
-      "name": "Seongnam, South Korea - Bundang",
+      "name": "성남 - 분당",
       "status": "OPEN",
       "address": {
         "street": "20, Tancheonsang-ro 151beon-gil, Seongnam-si, Gyeonggi-do",
@@ -4896,7 +4896,7 @@
     {
       "id": 6155,
       "locationId": "31733",
-      "name": "Seongnam, South Korea - Bundang AK Plaza",
+      "name": "성남 - 분당 AK플라자",
       "status": "OPEN",
       "address": {
         "street": "Hwangsaeul-ro 312beon-gil 36 36",
@@ -4935,7 +4935,7 @@
     {
       "id": 7361,
       "locationId": "31782",
-      "name": "Seongnam, South Korea - Bundang Korea Job World",
+      "name": "성남 - 분당 한국잡월드",
       "status": "OPEN",
       "address": {
         "street": "Seongnam-si Bundangsuseo-ro 501 13553",
@@ -4974,7 +4974,7 @@
     {
       "id": 1459,
       "locationId": "32969",
-      "name": "Seongnam, South Korea - Pangyo DeTerrace",
+      "name": "성남 - 판교 디테라스",
       "status": "OPEN",
       "address": {
         "street": "Seongnam Sampyeongdong 691 13488",
@@ -5013,7 +5013,7 @@
     {
       "id": 5806,
       "locationId": "superchargerseongnamakr",
-      "name": "Seongnam, South Korea - Pangyo KAKAO Azit",
+      "name": "성남 - 판교 카카오아지트",
       "status": "OPEN",
       "address": {
         "street": "166 Pangyoyeok-ro, Seongnam-si 463-420",
@@ -5052,7 +5052,7 @@
     {
       "id": 4115,
       "locationId": "seongnamalphadome2supercharger",
-      "name": "Seongnam, South Korea - Pangyo Tech1",
+      "name": "성남 - 판교 테크원",
       "status": "OPEN",
       "address": {
         "street": "Pangyo Tech One Tower, 534, Baekhyeon-dong, Bundang-gu",
@@ -5091,7 +5091,7 @@
     {
       "id": 6080,
       "locationId": "31715",
-      "name": "Seongnam, South Korea - Seohyun",
+      "name": "성남 - 서현",
       "status": "OPEN",
       "address": {
         "street": "28 Hwangsaeul-ro 311beon-gil, Seongnam-si",
@@ -5130,7 +5130,7 @@
     {
       "id": 2101,
       "locationId": "gangnnamsupercharger",
-      "name": "Seoul, South Korea - Apgujeong",
+      "name": "서울 - 압구정",
       "status": "OPEN",
       "address": {
         "street": "854 Nonhyeon-ro, Gangnam-gu, Seoul",
@@ -5168,7 +5168,7 @@
     {
       "id": 4347,
       "locationId": "31975",
-      "name": "Seoul, South Korea - CCMM Building",
+      "name": "서울 - CCMM빌딩",
       "status": "OPEN",
       "address": {
         "street": "101, Yeouigongwon-ro, Yeongdeungpo-gu",
@@ -5207,7 +5207,7 @@
     {
       "id": 3475,
       "locationId": "seolleungsupercharger",
-      "name": "Seoul, South Korea - Centerfield",
+      "name": "서울 - 센터필드",
       "status": "OPEN",
       "address": {
         "street": "231, Teheran-ro, Gangnam-gu",
@@ -5244,7 +5244,7 @@
     {
       "id": 3813,
       "locationId": "Misasupercharger",
-      "name": "Seoul, South Korea - Cheongnyangni",
+      "name": "서울 - 청량리",
       "status": "OPEN",
       "address": {
         "street": "214, Wangsan-ro, Dongdaemun-gu",
@@ -5283,7 +5283,7 @@
     {
       "id": 9109,
       "locationId": "59442",
-      "name": "Seoul, South Korea - Construction Building",
+      "name": "서울 - 건설빌딩",
       "status": "OPEN",
       "address": {
         "street": "711 Eonju-ro",
@@ -5321,7 +5321,7 @@
     {
       "id": 5753,
       "locationId": "superchargetseouldaechi",
-      "name": "Seoul, South Korea - Daechi",
+      "name": "서울 - 대치",
       "status": "OPEN",
       "address": {
         "street": "416 Yeongdong-daero, Seoul",
@@ -5360,7 +5360,7 @@
     {
       "id": 6090,
       "locationId": "32447",
-      "name": "Seoul, South Korea - Episode Seocho",
+      "name": "서울 - 에피소드 서초",
       "status": "OPEN",
       "address": {
         "street": "Seocho 2-dong, 1338-5 Seocho-dong, Seoul",
@@ -5399,7 +5399,7 @@
     {
       "id": 7963,
       "locationId": "teslaseoulseongsub",
-      "name": "Seoul, South Korea - Factorial Seongsu",
+      "name": "서울 - 팩토리얼 성수",
       "status": "OPEN",
       "address": {
         "street": "47 Seongsuillo 6(yuk)-gil",
@@ -5440,7 +5440,7 @@
     {
       "id": 3630,
       "locationId": "gangbuksupercharger",
-      "name": "Seoul, South Korea - Gangbuk Paraspara",
+      "name": "서울 - 강북 파라스파라",
       "status": "OPEN",
       "address": {
         "street": "689, Samyang-ro, Gangbuk-gu",
@@ -5477,7 +5477,7 @@
     {
       "id": 6853,
       "locationId": "31707",
-      "name": "Seoul, South Korea - Gangdong DM Square",
+      "name": "서울 - 강동 DM스퀘어",
       "status": "OPEN",
       "address": {
         "street": "Seoul Godeok-dong 93-2 Godeok-dong",
@@ -5516,7 +5516,7 @@
     {
       "id": 1115,
       "locationId": "seoulgangnamsupercharger",
-      "name": "Seoul, South Korea - Gangnam",
+      "name": "서울 - 강남",
       "status": "OPEN",
       "address": {
         "street": "521 Teheran-ro, Gangnam-gu, Seoul",
@@ -5553,7 +5553,7 @@
     {
       "id": 5047,
       "locationId": "geumcheonsupercharger",
-      "name": "Seoul, South Korea - Geumcheon Mario Outlet",
+      "name": "서울 - 금천 마리오아울렛",
       "status": "OPEN",
       "address": {
         "street": "Mario Outlet Hall 1 185, Digital-ro, Geumcheon-gu",
@@ -5592,7 +5592,7 @@
     {
       "id": 2216,
       "locationId": "seoulgangseosupercharger",
-      "name": "Seoul, South Korea - Gimpo Airport Lotte Mall",
+      "name": "서울 - 김포공항 롯데몰",
       "status": "OPEN",
       "address": {
         "street": "38 Haneul-gil, Gangseo-gu, Seoul",
@@ -5629,7 +5629,7 @@
     {
       "id": 6057,
       "locationId": "31866",
-      "name": "Seoul, South Korea - Gocheok I Park Mall",
+      "name": "서울 - 고척 아이파크몰",
       "status": "OPEN",
       "address": {
         "street": "Gocheok I'Park Mall 49, Gyeongin-ro 43-gil, Seoul",
@@ -5668,7 +5668,7 @@
     {
       "id": 11526,
       "locationId": "487273",
-      "name": "Seoul, South Korea - Gonghang-daero",
+      "name": "서울 - 공항대로",
       "status": "OPEN",
       "address": {
         "street": "247 Gonghang-daero",
@@ -5706,7 +5706,7 @@
     {
       "id": 3462,
       "locationId": "gurosupercharger",
-      "name": "Seoul, South Korea - Guro G Tower",
+      "name": "서울 - 구로 G타워",
       "status": "OPEN",
       "address": {
         "street": "38 Digital-ro 26-gil, Guro-gu",
@@ -5743,7 +5743,7 @@
     {
       "id": 4397,
       "locationId": "seoulsongpaolympicparksupercharger",
-      "name": "Seoul, South Korea - Jamsil Lotte World",
+      "name": "서울 - 잠실 롯데월드",
       "status": "OPEN",
       "address": {
         "street": "Lotte Department Store Jamsil Branch, 240 Olympic-ro, Songpa-gu",
@@ -5782,7 +5782,7 @@
     {
       "id": 6502,
       "locationId": "31754",
-      "name": "Seoul, South Korea - Jonggak",
+      "name": "서울 - 종각",
       "status": "OPEN",
       "address": {
         "street": "Seoul Gongpyeong-dong 5-1",
@@ -5822,7 +5822,7 @@
     {
       "id": 1130,
       "locationId": "seouljongnosupercharger",
-      "name": "Seoul, South Korea - Jongno",
+      "name": "서울 - 종로",
       "status": "CLOSED_PERM",
       "address": {
         "street": "33, Jong-ro, Jongno-gu, Seoul",
@@ -5858,7 +5858,7 @@
     {
       "id": 8555,
       "locationId": "31835",
-      "name": "Seoul, South Korea - Joongrang",
+      "name": "서울 - 중랑",
       "status": "OPEN",
       "address": {
         "street": "353 353, Mangu-ro",
@@ -5896,7 +5896,7 @@
     {
       "id": 1328,
       "locationId": "seouljamsilsupercharger",
-      "name": "Seoul, South Korea - Lotte World Tower",
+      "name": "서울 - 롯데월드타워",
       "status": "OPEN",
       "address": {
         "street": "Olympic-ro",
@@ -5933,7 +5933,7 @@
     {
       "id": 2233,
       "locationId": "seoulteheransupercharger",
-      "name": "Seoul, South Korea - N Tower",
+      "name": "서울 - N타워",
       "status": "OPEN",
       "address": {
         "street": "29 Teheran-ro, Gangnam-gu, Seoul",
@@ -5972,7 +5972,7 @@
     {
       "id": 5752,
       "locationId": "MapoSangAmsupercharger",
-      "name": "Seoul, South Korea - SangAm",
+      "name": "서울 - 상암",
       "status": "OPEN",
       "address": {
         "street": "80 Maebongsan-ro, Seoul",
@@ -6011,7 +6011,7 @@
     {
       "id": 3500,
       "locationId": "seoulseochosupercharger",
-      "name": "Seoul, South Korea - Seocho Ssangyong Platinum",
+      "name": "서울 - 서초 쌍용플래티넘",
       "status": "OPEN",
       "address": {
         "street": "18, Seochojungang-ro, Seocho-gu",
@@ -6048,7 +6048,7 @@
     {
       "id": 5490,
       "locationId": "seongsudtowerq322",
-      "name": "Seoul, South Korea - Seongsu D Tower",
+      "name": "서울 - 성수 D타워",
       "status": "OPEN",
       "address": {
         "street": "B5, 83-21 Wangsimni-ro, Seongdong-gu. SEOUL, 04769",
@@ -6087,7 +6087,7 @@
     {
       "id": 4305,
       "locationId": "gangnamsinsasupercharger",
-      "name": "Seoul, South Korea - Sinsa",
+      "name": "서울 - 신사",
       "status": "OPEN",
       "address": {
         "street": "Sinsa Square 652, Gangnam-daero",
@@ -6126,7 +6126,7 @@
     {
       "id": 3699,
       "locationId": "songpasupercharger",
-      "name": "Seoul, South Korea - Songpa Sofitel",
+      "name": "서울 - 송파 소피텔",
       "status": "OPEN",
       "address": {
         "street": "209, Jamsil-ro, Songpa-gu",
@@ -6165,7 +6165,7 @@
     {
       "id": 4346,
       "locationId": "suyusupercharger",
-      "name": "Seoul, South Korea - Suyu",
+      "name": "서울 - 수유",
       "status": "OPEN",
       "address": {
         "street": "Episode Suyu 838, 315, Dobong-ro",
@@ -6204,7 +6204,7 @@
     {
       "id": 4335,
       "locationId": "seoultimesstreamsupercharger",
-      "name": "Seoul, South Korea - Times Stream",
+      "name": "서울 - 타임스트림",
       "status": "OPEN",
       "address": {
         "street": "Times Stream Mall, 330 Sillim-ro",
@@ -6243,7 +6243,7 @@
     {
       "id": 3477,
       "locationId": "seoulseongsusupercharger",
-      "name": "Seoul, South Korea - Wangsimni",
+      "name": "서울 - 왕십리",
       "status": "OPEN",
       "address": {
         "street": "17, Wangsimni Gwangjang-ro, Seongdong-gu",
@@ -6280,7 +6280,7 @@
     {
       "id": 8831,
       "locationId": "450903",
-      "name": "Seoul, South Korea - Wirye",
+      "name": "서울 - 위례",
       "status": "VOTING",
       "address": {
         "street": "X",
@@ -6309,7 +6309,7 @@
     {
       "id": 1153,
       "locationId": "seoulyeouidosupercharger",
-      "name": "Seoul, South Korea - Yeoido IFC",
+      "name": "서울 - 여의도 IFC",
       "status": "OPEN",
       "address": {
         "street": "10, Gukjegeumyung-ro, Yeongdeungpo-gu, Seoul",
@@ -6348,7 +6348,7 @@
     {
       "id": 6281,
       "locationId": "31871",
-      "name": "Seoul, South Korea - Yongsan Dragon City",
+      "name": "서울 - 용산 드래곤시티",
       "status": "OPEN",
       "address": {
         "street": "Yongsan-gu Cheongpa-ro 20-gil 95 04372",
@@ -6387,7 +6387,7 @@
     {
       "id": 1460,
       "locationId": "seoulyongsansupercharger",
-      "name": "Seoul, South Korea - Yongsan Grand Hyatt",
+      "name": "서울 - 용산 그랜드 하얏트",
       "status": "OPEN",
       "address": {
         "street": "322 Sowolno, Yongsan-gu",
@@ -6424,7 +6424,7 @@
     {
       "id": 1911,
       "locationId": "sintanjinsupercharger",
-      "name": "Shintanjin, South Korea",
+      "name": "신탄진",
       "status": "OPEN",
       "address": {
         "street": "490 Sintanjin-ro, Daejeon",
@@ -6464,7 +6464,7 @@
     {
       "id": 10834,
       "locationId": "462966",
-      "name": "Siheung, South Korea - Expressway No.100",
+      "name": "시흥 - 수도권제1순환고속도로",
       "status": "OPEN",
       "address": {
         "street": "Capital Region First Ring 105-1",
@@ -6503,7 +6503,7 @@
     {
       "id": 10835,
       "locationId": "463020",
-      "name": "Siheung Haneul Rest Area (Pangyo), South Korea",
+      "name": "시흥 하늘휴게소(판교)",
       "status": "PLAN",
       "address": {
         "street": "수도권제1순환고속도로 106",
@@ -6532,7 +6532,7 @@
     {
       "id": 10833,
       "locationId": "31703",
-      "name": "Siheung, South Korea",
+      "name": "시흥",
       "status": "VOTING",
       "address": {
         "street": "x",
@@ -6561,7 +6561,7 @@
     {
       "id": 5053,
       "locationId": "35418",
-      "name": "Sokcho, South Korea - Hanwha Resort Seorak",
+      "name": "속초 - 한화리조트 설악",
       "status": "OPEN",
       "address": {
         "street": "88, Misiryeong-ro 2983beon-gil, Sokcho-si, Gangwon-do",
@@ -6600,7 +6600,7 @@
     {
       "id": 1418,
       "locationId": "sokchogangwondosupercharger",
-      "name": "Sokcho, South Korea - Lotte Resort",
+      "name": "속초 - 롯데리조트",
       "status": "OPEN",
       "address": {
         "street": "186 Daepohang-gil, Sokcho-si, Gangwon-do 24900대포항길 186",
@@ -6640,7 +6640,7 @@
     {
       "id": 9308,
       "locationId": "32990",
-      "name": "Sokcho-si, South Korea - Joyang-dong",
+      "name": "속초 - 조양동",
       "status": "OPEN",
       "address": {
         "street": "1556-6 Joyang-dong",
@@ -6678,7 +6678,7 @@
     {
       "id": 3497,
       "locationId": "suncheonsupercharger",
-      "name": "Suncheon, South Korea - Joryedong",
+      "name": "순천 - 조례동",
       "status": "OPEN",
       "address": {
         "street": "640 Jorye-dong",
@@ -6717,7 +6717,7 @@
     {
       "id": 7829,
       "locationId": "31859",
-      "name": "Suwon, South Korea - AK Plaza",
+      "name": "수원 - AK플라자",
       "status": "OPEN",
       "address": {
         "street": "924, Deogyeong, Paldal",
@@ -6756,7 +6756,7 @@
     {
       "id": 1553,
       "locationId": "suwonsupercharger",
-      "name": "Suwon, South Korea - Lotte Mall",
+      "name": "수원 - 롯데몰",
       "status": "OPEN",
       "address": {
         "street": "Sehwado 134, Gwon Seong-gu",
@@ -6793,7 +6793,7 @@
     {
       "id": 5754,
       "locationId": "SuwonYeongtongsupercharger",
-      "name": "Suwon, South Korea - Yeongtong Fantaseum",
+      "name": "수원 - 영통 판타지움",
       "status": "OPEN",
       "address": {
         "street": "2nd and 3rd Floor, 1566 Songjuk-dong, Deokyeong-daero, Suwon-si",
@@ -6833,7 +6833,7 @@
     {
       "id": 6552,
       "locationId": "33633",
-      "name": "Taebaek, South Korea",
+      "name": "태백",
       "status": "OPEN",
       "address": {
         "street": "Taebaek Pyeonghwa-gil 15 26047",
@@ -6872,7 +6872,7 @@
     {
       "id": 11524,
       "locationId": "486104",
-      "name": "Tongyeong-si, South Korea",
+      "name": "통영",
       "status": "VOTING",
       "address": {
         "street": "1574-46 Jungnim-ri",
@@ -6901,7 +6901,7 @@
     {
       "id": 7396,
       "locationId": "Uijeongbu-Woorinara",
-      "name": "Uijeongbu, South Korea - Jangam Woorinara",
+      "name": "의정부 - 장암 우리나라",
       "status": "OPEN",
       "address": {
         "street": "Euijeongbu Dongil-ro 128 Beon-gil 11",
@@ -6940,7 +6940,7 @@
     {
       "id": 8560,
       "locationId": "31863",
-      "name": "Uljin County, South Korea - Eupnae-ri",
+      "name": "울진 - 읍내리",
       "status": "OPEN",
       "address": {
         "street": "35-10 Eupnae-ri",
@@ -6979,7 +6979,7 @@
     {
       "id": 6621,
       "locationId": "31864",
-      "name": "Ulsan, South Korea - Moda Outlet",
+      "name": "울산 - 모다아울렛",
       "status": "OPEN",
       "address": {
         "street": "Ulsan 78-6, Jinjangyutong-ro 78-6 44248",
@@ -7018,7 +7018,7 @@
     {
       "id": 6405,
       "locationId": "31832",
-      "name": "Wanju, South Korea",
+      "name": "완주",
       "status": "OPEN",
       "address": {
         "street": "Wanju-gun Bongbi-ro Bongdong-eup 23 55313",
@@ -7057,7 +7057,7 @@
     {
       "id": 7366,
       "locationId": "34605",
-      "name": "Wonju, South Korea - AK Plaza",
+      "name": "원주 - AK플라자",
       "status": "OPEN",
       "address": {
         "street": "1 26437 Bonghwa, Wonju",
@@ -7096,7 +7096,7 @@
     {
       "id": 1132,
       "locationId": "wonjusupercharger",
-      "name": "Wonju, South Korea - Oak Valley",
+      "name": "원주 - 오크밸리",
       "status": "OPEN",
       "address": {
         "street": "58, Oak Valley 2-gil, Jijeong-myeon, Wonju-si, Gangwon-do",
@@ -7133,7 +7133,7 @@
     {
       "id": 5508,
       "locationId": "Yangsansupercharger",
-      "name": "Yangsan, South Korea - Mulgeum Oslo Park",
+      "name": "양산 - 물금 오슬로파크",
       "status": "OPEN",
       "address": {
         "street": "14, Beomgu-ro, Yangsan-si 50611",
@@ -7172,7 +7172,7 @@
     {
       "id": 7229,
       "locationId": "32985",
-      "name": "Yangyang, South Korea - Mulchi Port",
+      "name": "양양 - 물치항",
       "status": "OPEN",
       "address": {
         "street": "3594 Donghae-daero",
@@ -7211,7 +7211,7 @@
     {
       "id": 3948,
       "locationId": "yangyangsupercharger",
-      "name": "Yangyang, South Korea - Seolhaewon",
+      "name": "양양 - 설해원",
       "status": "OPEN",
       "address": {
         "street": "Seolhaewon Resort, 230, Gonghang-ro, Sonyang-myeon",
@@ -7250,7 +7250,7 @@
     {
       "id": 3284,
       "locationId": "yeojusupercharger",
-      "name": "Yeoju, South Korea - SSG Premium Outlet",
+      "name": "여주 - SSG프리미엄아울렛",
       "status": "OPEN",
       "address": {
         "street": "360 Myeongpum-ro, Yeoju-si, Gyeonggi-do",
@@ -7287,7 +7287,7 @@
     {
       "id": 5938,
       "locationId": "31729",
-      "name": "Yeoju, South Korea - Sun Valley Hotel",
+      "name": "여주 - 선밸리호텔",
       "status": "OPEN",
       "address": {
         "street": "Yeonyang-dong, Yeoju-si 414 12634",
@@ -7326,7 +7326,7 @@
     {
       "id": 8563,
       "locationId": "407953",
-      "name": "Yeongdeok-gun, South Korea",
+      "name": "영덕",
       "status": "VOTING",
       "address": {
         "street": "X",
@@ -7355,7 +7355,7 @@
     {
       "id": 8562,
       "locationId": "31774",
-      "name": "Yeongju, South Korea",
+      "name": "영주",
       "status": "VOTING",
       "address": {
         "street": "X",
@@ -7384,7 +7384,7 @@
     {
       "id": 6934,
       "locationId": "33632",
-      "name": "Yeongwol, South Korea",
+      "name": "영월",
       "status": "OPEN",
       "address": {
         "street": "Yeongwol-gun Bangjeol-ri 782 230887 Yeongwol-eup",
@@ -7423,7 +7423,7 @@
     {
       "id": 3885,
       "locationId": "yeosusupercharger",
-      "name": "Yeosu, South Korea - Hiddenbay Hotel",
+      "name": "여수 - 히든베이호텔",
       "status": "OPEN",
       "address": {
         "street": "496-25, Sinwol-ro",
@@ -7462,7 +7462,7 @@
     {
       "id": 10829,
       "locationId": "477457",
-      "name": "Yesan-eup, South Korea",
+      "name": "예산",
       "status": "VOTING",
       "address": {
         "street": "270-20 Daehoe-ri",
@@ -7491,7 +7491,7 @@
     {
       "id": 3285,
       "locationId": "yonginsupercharger",
-      "name": "Yongin, South Korea - Giheung",
+      "name": "용인 - 기흥",
       "status": "OPEN",
       "address": {
         "street": "124 Singomae-ro, Yongin-si, Gyeonggi-do",
@@ -7528,7 +7528,7 @@
     {
       "id": 6629,
       "locationId": "31718",
-      "name": "Yongin, South Korea - Pogok",
+      "name": "용인 - 포곡",
       "status": "OPEN",
       "address": {
         "street": "Yongin-si Seokseong-ro 1051 17025 Pogok-eup",
@@ -7567,7 +7567,7 @@
     {
       "id": 7212,
       "locationId": "34658",
-      "name": "Yongin, South Korea - Yangji Logistic",
+      "name": "용인 - 양지물류",
       "status": "OPEN",
       "address": {
         "street": "Yongin 924 Yangji 924 17158",
