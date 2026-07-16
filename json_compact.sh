@@ -20,15 +20,19 @@ fi
 # 필요한 필드만 추출하여 compact JSON 생성
 jq -c '[.results[] | {
     id,
+    locationId,
     name,
     dateOpened,
     dateClosed,
     gps: {latitude: .gps.latitude, longitude: .gps.longitude},
+    address,
     stallCount,
     stalls,
     status,
     powerKilowatt,
-    otherEVs
+    solarCanopy,
+    otherEVs,
+    urlDiscuss
 }]' "$INPUT_FILE" > "$OUTPUT_FILE"
 
 # 결과 출력

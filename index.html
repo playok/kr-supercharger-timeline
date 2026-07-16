@@ -209,6 +209,10 @@
                 config: '구성',
                 speed: '충전속도',
                 otherEVsYes: '타사 EV 호환',
+                solarCanopy: '태양광',
+                address: '주소',
+                teslaLocation: 'Tesla 위치',
+                discuss: '토론',
                 opened: '오픈',
                 closed: '폐쇄',
                 growthChart: '증감 현황',
@@ -236,6 +240,10 @@
                 config: 'Config',
                 speed: 'Speed',
                 otherEVsYes: 'Other EVs OK',
+                solarCanopy: 'Solar',
+                address: 'Address',
+                teslaLocation: 'Tesla Location',
+                discuss: 'Discuss',
                 opened: 'Opened',
                 closed: 'Closed',
                 growthChart: 'Growth Trend',
@@ -537,7 +545,9 @@
                         id: d.id, name: d.name, lat, lng,
                         dateOpened: d.dateOpened || "1900-01-01", dateClosed: d.dateClosed || null,
                         stalls: d.stallCount, breakdown: d.stalls || {}, power: d.powerKilowatt, type: version,
-                        status: status, otherEVs: d.otherEVs || false
+                        status: status, otherEVs: d.otherEVs || false,
+                        address: d.address || null, solarCanopy: d.solarCanopy || false,
+                        locationId: d.locationId || null, urlDiscuss: d.urlDiscuss || false
                     };
                 });
 
@@ -630,8 +640,26 @@
 
                 const closedInfo = d.dateClosed ? `<div class="text-slate-500">${t.closed}: ${d.dateClosed}</div>` : '';
                 const powerInfo = d.power ? `<div class="text-slate-500">${t.speed}: ${d.power}kW</div>` : '';
-                const otherEVsInfo = d.otherEVs ? `<div class="inline-block mt-1 px-1.5 py-0.5 bg-blue-100 text-blue-700 text-[10px] font-bold rounded">${t.otherEVsYes}</div>` : '';
-                marker.bindPopup(`<div class="text-sm"><div class="font-bold border-b pb-1 mb-1">${statusTag}${d.name}</div><div class="text-slate-500">${t.opened}: ${d.dateOpened}</div>${closedInfo}<div class="text-slate-700 font-semibold">${stallSummary}</div>${powerInfo}${otherEVsInfo}</div>`);
+
+                const badges = [];
+                if (d.otherEVs) badges.push(`<span class="inline-block px-1.5 py-0.5 bg-blue-100 text-blue-700 text-[10px] font-bold rounded">${t.otherEVsYes}</span>`);
+                if (d.solarCanopy) badges.push(`<span class="inline-block px-1.5 py-0.5 bg-amber-100 text-amber-700 text-[10px] font-bold rounded">${t.solarCanopy}</span>`);
+                const badgeRow = badges.length ? `<div class="flex gap-1 mt-1">${badges.join('')}</div>` : '';
+
+                const addrParts = [];
+                if (d.address) {
+                    if (d.address.street) addrParts.push(d.address.street);
+                    if (d.address.city) addrParts.push(d.address.city);
+                    if (d.address.state && d.address.state !== d.address.city) addrParts.push(d.address.state);
+                }
+                const addressInfo = addrParts.length ? `<div class="text-slate-400 text-xs mt-1">${addrParts.join(', ')}</div>` : '';
+
+                const links = [];
+                if (d.locationId) links.push(`<a href="https://www.tesla.com/findus/location/${d.locationId}" target="_blank" class="hover:text-tesla-red underline decoration-dotted text-xs">${t.teslaLocation}</a>`);
+                if (d.urlDiscuss && d.locationId) links.push(`<a href="https://supercharge.info/site/${d.locationId}" target="_blank" class="hover:text-tesla-red underline decoration-dotted text-xs">${t.discuss}</a>`);
+                const linkRow = links.length ? `<div class="flex gap-3 mt-1 pt-1 border-t">${links.join('')}</div>` : '';
+
+                marker.bindPopup(`<div class="text-sm" style="min-width:180px"><div class="font-bold border-b pb-1 mb-1">${statusTag}${d.name}</div><div class="text-slate-500">${t.opened}: ${d.dateOpened}</div>${closedInfo}<div class="text-slate-700 font-semibold">${stallSummary}</div>${powerInfo}${addressInfo}${badgeRow}${linkRow}</div>`);
                 markers.push(marker);
                 if (useCluster) {
                     clusterGroup.addLayer(marker);
