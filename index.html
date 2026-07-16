@@ -655,8 +655,8 @@
                 const addressInfo = addrParts.length ? `<div class="text-slate-400 text-xs mt-1">${addrParts.join(', ')}</div>` : '';
 
                 const links = [];
-                if (d.locationId) links.push(`<a href="https://www.tesla.com/findus/location/${d.locationId}" target="_blank" class="hover:text-tesla-red underline decoration-dotted text-xs">${t.teslaLocation}</a>`);
-                if (d.urlDiscuss && d.locationId) links.push(`<a href="https://supercharge.info/site/${d.locationId}" target="_blank" class="hover:text-tesla-red underline decoration-dotted text-xs">${t.discuss}</a>`);
+                if (d.locationId) links.push(`<a href="https://www.tesla.com/findus?location=${d.locationId}" target="_blank" class="hover:text-tesla-red underline decoration-dotted text-xs">${t.teslaLocation}</a>`);
+                if (d.locationId) links.push(`<a href="https://supercharge.info/?id=${d.locationId}" target="_blank" class="hover:text-tesla-red underline decoration-dotted text-xs">${t.discuss}</a>`);
                 const linkRow = links.length ? `<div class="flex gap-3 mt-1 pt-1 border-t">${links.join('')}</div>` : '';
 
                 marker.bindPopup(`<div class="text-sm" style="min-width:180px"><div class="font-bold border-b pb-1 mb-1">${statusTag}${d.name}</div><div class="text-slate-500">${t.opened}: ${d.dateOpened}</div>${closedInfo}<div class="text-slate-700 font-semibold">${stallSummary}</div>${powerInfo}${addressInfo}${badgeRow}${linkRow}</div>`);
