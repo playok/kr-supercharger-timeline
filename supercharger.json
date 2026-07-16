@@ -6504,12 +6504,12 @@
       "id": 10835,
       "locationId": "463020",
       "name": "시흥 하늘휴게소(판교)",
-      "status": "PLAN",
+      "status": "OPEN",
       "address": {
         "street": "수도권제1순환고속도로 106",
         "city": "Siheung",
         "state": "Gyeonggi",
-        "zip": null,
+        "zip": "14983",
         "countryId": 137,
         "country": "South Korea",
         "regionId": 102,
@@ -6519,15 +6519,26 @@
         "latitude": 37.383192,
         "longitude": 126.854965
       },
-      "stallCount": 0,
+      "dateOpened": "2026-07-14",
+      "stallCount": 9,
       "counted": true,
       "elevationMeters": 37,
       "powerKilowatt": 250,
       "solarCanopy": false,
       "battery": false,
-      "otherEVs": false,
+      "otherEVs": true,
       "statusDays": 0,
-      "urlDiscuss": true
+      "urlDiscuss": true,
+      "stalls": {
+        "v4": 9,
+        "accessible": 0,
+        "trailerFriendly": 0
+      },
+      "plugs": {
+        "nacs": 9,
+        "ccs1": 9,
+        "multi": 9
+      }
     },
     {
       "id": 10833,
