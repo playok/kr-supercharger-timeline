@@ -21,7 +21,7 @@
 - HTML5 / CSS3 / JavaScript (Vanilla)
 - [Tailwind CSS](https://tailwindcss.com/) - 스타일링
 - [Leaflet.js](https://leafletjs.com/) - 지도 라이브러리
-- [CARTO Basemaps](https://carto.com/basemaps) - 타일 서버
+- [Esri World Light Gray Canvas](https://www.arcgis.com/home/item.html?id=ed712cb1db3e4bae9e85329040fb9a49) - 타일 서버
 
 ## Data Source
 
@@ -99,5 +99,5 @@ MIT License
 ## Attribution
 
 - Map data: [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors
-- Tiles: [CARTO](https://carto.com/attributions)
+- Tiles: [Esri](https://www.esri.com/) — Esri, HERE, Garmin, OpenStreetMap contributors
 - Data: [supercharge.info](https://supercharge.info)
